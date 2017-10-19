@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="Arver1, HTML Academy, Layout_Mishka">
+	<meta name="description" content="Layout Mishka for the practice">
+	<title>Layout_Mishka</title>
+</head>
+<body>
+	<header class="page-header">
+		<h1 class="page-header__title">Магазин &laquo;Мишка&raquo; - изделия ручной работы для дома</h1> <!-- скрыт -->
+		<a class="link page-header__link-logo"><img src="http://placehold.it/86x35" width="86" height="35" alt="logo" title="logo"></a>
+		<nav class="main-nav">
+			<span class="main-nav__toggle"></span>
+			<ul class="main-nav__list">
+				<li class="main-nav__list__item"><a class="main-nav__link" href="#">Каталог товаров</a></li>
+				<li class="main-nav__list__item"><a class="main-nav__link" href="#">Вязание на заказ</a></li>
+			</ul>
+		</nav>	
+		<ul class="user-block-list">
+			<li class="user-block-list__item user-block-list__item-search">Поиск по сайту</li>
+			<li class="user-block-list__item user-block-list__item-basket">Корзина: пока пуста</li>
+		</ul>
+	</header>
+	<main class="form-main">
+		<h2 class="form-main__title">Вязание на заказ</h2>
+		<p class="form-main__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+		<form class="form-main__form action="https://echo.htmlacademy.ru/" method="get">
+			<fieldset class="form-type">
+				<legend class="form-type__title">Тип</legend>
+				<input class="form-type__field" type="radio" name="type" id="accessories" checked>
+				<label class="label-type" for="accessories">Аксессуар для интерьера</label>
+				<input class="form-type__field" type="radio" name="type" id="toys">
+				<label class="label-type" for="toys">Детская игрушка</label>
+			</fieldset>
+			<fieldset class="form-color">
+				<legend class="form-color__title">Цвет</legend>
+				<input class="form-color__field" type="checkbox" name="color" id="color_white" checked>
+				<label class="label-color" for="color_white">Белый</label>
+				<input class="form-color__field" type="checkbox" name="color" id="color_gray" checked>
+				<label class="label-color" for="color_gray">Серый</label>
+				<input class="form-color__field" type="checkbox" name="color" id="color_tiffany">
+				<label class="label-color" for="color_tiffany">«Тиффани»</label>
+				<input class="form-color__field" type="checkbox" name="color" id="color_black">
+				<label class="label-color" for="color_black">Черный</label>
+				<input class="form-color__field" type="checkbox" name="color" id="color_pink">
+				<label class="label-color" for="color_pink">Розовый</label>
+				<input class="form-color__field" type="checkbox" name="color" id="color_orange">
+				<label class="label-color" for="color_orange">Оранжевый</label>
+			</fieldset>
+			<fieldset class="form-initials">
+				<legend class="form-initials__title">Фио</legend>
+				<input class="form-initials__filed" type="text" name="first_name" id="first_name" required>
+				<label class="label-initials" for="first_name">Имя:</label>
+				<input class="form-initials__filed" type="text" name="last_name" id="last_name" required>
+				<label class="label-initials" for="last_name">Фамилия:</label>
+				<input class="form-initials__filed" type="text" name="patronymic" id="patronymic">
+				<label class="label-initials" for="patronymic">Отчество:</label>
+			</fieldset>
+			<fieldset class="form-tel">
+				<legend class="form-tel__title">Тел</legend>
+				<input class="form-tel__field" type="tel" required>
+			</fieldset>
+			<fieldset class="form-email">
+				<legend class="form-email__title">E-mail</legend>
+				<input class="form-email__field" type="email" required>
+			</fieldset>
+			<fieldset class="form-extra">
+				<legend class="form-extra__title">Доп</legend>
+				<textarea class="form-extra__field"></textarea>
+			</fieldset>
+			<span>*Поля обязательны для заполнения</span>
+			<input type="submit" value="Отправить заказ">
+		</form>
+	</main>
+	<footer class="page-footer">
+		<img class="page-footer__logo" src="http://placehold.it/102x34" alt="logo" title="logo">
+		<div class="page-footer__wrapper">
+			<a class="btn btn-instagram" href="#">Мы в Инстраграме</a>
+			<a class="btn btn-facebook" href="#">Мы в Фейсбуке</a>
+			<a class="btn btn-twitter" href="#">Мы в Твиттере</a>
+		</div>
+		<p class="page-footer__copyright">Разработано <a class="btn bnt-copyright‐link" href="https://htmlacademy.ru/intensive/adaptive">в HTML Academy</a></p>
+	</footer>
+</body>
+</html>
