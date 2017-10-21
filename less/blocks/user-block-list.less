@@ -1,0 +1,30 @@
+.user-block-list {
+	font-size: 17px;
+	line-height: 24px;
+	font-weight: bold;
+	color: #000000;
+	font-family: 'Open Sans';
+	list-style: none;
+	padding: 0;
+	display: none;
+	&__item {
+		position: relative;
+		padding-left: 30px;
+	}
+	&__item::before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 21px;
+		height: 21px;
+		left: 0;
+		top: 0;
+		opacity: 0.2;
+	}
+	&__item-search::before {
+		background: url('../img/icon-search.svg') 50% 50% no-repeat;
+	}
+	&__item-basket::before {
+		background: url('../img/icon-cart.svg') 50% 50% no-repeat;
+	}
+}

@@ -1,3 +1,116 @@
-body {
-  background: lightgray;
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../../fonts/opensans.woff') format('woff'), url('../../fonts/opensans.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../../fonts/opensansbold.woff') format('woff'), url('../../fonts/opensansbold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+.page-header {
+  background-color: #ffffff;
+}
+.page-header__title {
+  display: none;
+}
+.main-nav__toggle {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #000000;
+  position: relative;
+}
+.main-nav__toggle::before,
+.main-nav__toggle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: #000000;
+}
+.main-nav__toggle::before {
+  top: -6px;
+  left: 0;
+}
+.main-nav__toggle::after {
+  bottom: -6px;
+  left: 0;
+}
+.main-nav__list {
+  display: none;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #000000;
+  font-family: 'Open Sans';
+  list-style: none;
+}
+.user-block-list {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #000000;
+  font-family: 'Open Sans';
+  list-style: none;
+  padding: 0;
+  display: none;
+}
+.user-block-list__item {
+  position: relative;
+  padding-left: 30px;
+}
+.user-block-list__item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  left: 0;
+  top: 0;
+  opacity: 0.2;
+}
+.user-block-list__item-search::before {
+  background: url('../img/icon-search.svg') 50% 50% no-repeat;
+}
+.user-block-list__item-basket::before {
+  background: url('../img/icon-cart.svg') 50% 50% no-repeat;
+}
+.page-main__title {
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #000000;
+  font-family: 'Open Sans';
+}
+.page-main__special-offers-list {
+  display: none;
+  list-style: none;
+}
+.page-main__breadcrumbs {
+  list-style: none;
+}
+.page-main__breadcrumbs__item {
+  background-color: #63d1bb;
+}
+.page-main__link {
+  text-decoration: none;
+}
+.page-main__link-breadcrumbs {
+  font-size: 19px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: 'Open Sans';
+}
+.goods-favorites {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #444444;
+  font-family: 'Open Sans';
+  background-color: #ffffff;
 }
