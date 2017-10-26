@@ -1,0 +1,36 @@
+.main-nav {
+	padding-top: 16px;
+	&__toggle {
+		display: block;
+		width: 20px;
+		height: 2px;
+		background-color: #000000;
+		position: relative;
+	}
+	&__toggle::before,
+	&__toggle::after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 20px;
+		height: 2px;
+		background-color: #000000;
+	}
+	&__toggle::before {
+		top: -6px;
+		left: 0;
+	}
+	&__toggle::after {
+		bottom: -6px;
+		left: 0;
+	}
+	&__list {
+		display: none;
+		font-size: 17px;
+		line-height: 24px;
+		font-weight: bold;
+		color: #000000;
+		font-family: 'Open Sans';
+		list-style: none;
+	}
+}
