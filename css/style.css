@@ -20,7 +20,6 @@
   border: 0;
 }
 .page-header {
-  outline: 1px solid red;
   background-color: #ffffff;
   width: 260px;
   padding: 22px 31px 18px 30px;
@@ -44,6 +43,8 @@
 .page-header__link-logo {
   margin-right: 67px;
   display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .page-header {
@@ -53,7 +54,9 @@
   .page-header__link-logo {
     margin-right: auto;
     display: inline-block;
-    width: 113px;
+    vertical-align: top;
+    -ms-flex-preferred-size: 113px;
+        flex-basis: 113px;
     height: 46px;
     padding-top: 22px;
     padding-left: 8px;
@@ -61,11 +64,19 @@
   .page-header__logo-img {
     width: 100%;
     height: auto;
-    cursor: pointer;
   }
 }
 .main-nav {
   padding-top: 16px;
+  /*@media @desktop_width {
+		&__toggle {
+			display: none;
+		}
+		&__list {
+			display: none;
+			position: absolute;
+		}
+	}*/
 }
 .main-nav__toggle {
   display: block;
@@ -96,29 +107,43 @@
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
-  color: #000000;
+  color: #000;
   font-family: 'Open Sans';
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .main-nav__link {
   text-decoration: none;
+  color: #000;
 }
 @media (min-width: 768px) {
+  .main-nav {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    position: relative;
+  }
   .main-nav__toggle {
     display: none;
   }
   .main-nav__list {
-    display: none;
+    display: -ms-flexbox;
+    display: flex;
+    width: 334px;
     position: absolute;
+    top: 34px;
+    left: -111px;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #000;
+    font-family: 'Open Sans';
   }
-}
-@media (min-width: 1150px) {
-  .main-nav__toggle {
-    display: none;
-  }
-  .main-nav__list {
-    display: none;
-    position: absolute;
+  .main-nav__list__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
 }
 .user-block-list {
@@ -157,7 +182,7 @@
     -ms-flex-preferred-size: 84px;
         flex-basis: 84px;
     box-sizing: border-box;
-    padding: 31px 0px 35px;
+    padding: 31px 0px 33px;
     border-right: 1px solid #ececec;
     border-left: 1px solid #ececec;
   }
@@ -166,7 +191,7 @@
         flex-basis: 274px;
     box-sizing: border-box;
     text-align: right;
-    padding: 31px 10px 35px 0px;
+    padding: 31px 10px 33px 0px;
   }
   .user-block-list__icon-cart {
     position: absolute;
