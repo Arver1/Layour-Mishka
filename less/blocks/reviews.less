@@ -1,5 +1,7 @@
 .reviews {
+	position: relative;
 	padding: 0px 31px 0px 29px;
+	margin-bottom: 35px;
 	&__title {
 		margin: 0;
 		margin-bottom: 10px;
@@ -51,3 +53,13 @@
 		width: 129px;
 	}
 }
+.reviews::after {
+		content: "";
+		display: block;
+		position: absolute;
+		background: url('../../img/zigzag-line.svg') repeat-x;
+		width: 320px;
+		height: 7px;
+		left: 0;
+		bottom: 0;
+	}

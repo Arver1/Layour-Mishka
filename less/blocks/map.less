@@ -1,0 +1,52 @@
+.map {
+	&__details {
+		border-collapse: collapse;
+		width: 100%;
+		margin-bottom: 33px;
+	}
+	&__details caption {
+		text-align: left;
+		.font(18px;30px);
+		padding: 0 31px 0 29px;
+	}
+	&__details__item {
+		.font(15px;30px;normal;#444444);
+		vertical-align: top;
+		padding-top: 26px;
+		padding-bottom: 4px;
+	}
+	&__details__item-dt {
+		width: 77px;
+		padding-left: 29px;
+	}
+	&__details__item-dd {
+		width: 183px;
+		padding-right:31px
+	}
+	&__link-details {
+		text-decoration: none;
+		text-decoration-color: red;
+		.font(15px;30px;normal;#444444);
+		position: relative;
+	}
+	&__link-details::before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		background-color: #62d1ba;
+		bottom: -5px;
+	}
+	&__wrapper {
+		margin-bottom: 39px;
+		width: 320px;
+		height: 457px;
+		position: relative;
+	}
+	&__pin {
+		position: absolute;
+		top: 165px;
+		left: 124px;
+	}
+}

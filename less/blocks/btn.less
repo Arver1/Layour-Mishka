@@ -11,7 +11,9 @@
 		width: 100%;
 		margin-bottom: 35px;
 	}
-	&-order:active {
+	&-order:active,
+	&-write-us:active,
+	&-write-reviews:active {
 		background-color: #444444;
 		color: rgba(255,255,255, 0.3);
 	}
@@ -53,5 +55,53 @@
 	&-write-reviews {
 		padding: 14px 0;
 		width: 100%;
+		margin-bottom: 51px;
+	}
+	&-write-us {
+		width: 260px;
+		margin-left: 29px;
+		margin-right: 31px;
+		margin-bottom: 10px;
+		padding: 14px 0;
+	}
+	&-instagram,
+	&-twitter {
+		padding-top: 6px;
+	}
+	&-instagram,
+	&-facebook,
+	&-twitter {
+		font-size: 0;
+		line-height: 0;
+		border: none;
+	}
+	&-instagram:active &-instagram__icon,
+	&-facebook:active &-facebook__icon,
+	&-twitter:active &-twitter__icon {
+		fill: #46c1ae;
+		fill-opacity: 0.3;
+	}
+	&-instagram {
+		margin-right: 37px;
+	}
+	&-facebook {
+		margin-right: 36px;
+	}
+	&-copyright {
+		font-size: 0;
+		border: none;
+		width: 100%;
+		padding: 23px 38px;
+		&__text {
+			.font(19px;18px);
+			text-transform: none;
+			padding-top: 5px;
+			.inline_block();
+			margin-right: 29px;
+			margin-bottom: 10px;
+		}
+		&__icon {
+			fill: #63d1bb;
+		}
 	}
 }
