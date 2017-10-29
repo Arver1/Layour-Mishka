@@ -7,6 +7,23 @@
 	&__item {
 		position: relative;
 	}
+	&__item:hover {
+		color: rgba(0,0,0,0.6);
+		cursor: pointer;
+	}
+	&__item:hover &__icon-cart,
+	&__icon-search:hover {
+		fill: #63d1bb;
+		fill-opacity: 1;
+	}
+	&__item:active {
+		color: rgba(0,0,0,0.3);
+	}
+	&__item:active &__icon-cart,
+	&__icon-search:active {
+		fill: #63d1bb;
+		fill-opacity: 0.3;
+	}
 	&__item-search {
 		font-size: 0;
 	}
