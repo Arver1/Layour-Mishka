@@ -1,13 +1,8 @@
 .btn {
 	text-decoration: none;
-	color: #444444;
-	font-size: 17px;
-	line-height: 20px;
-	font-weight: bold;
-	font-family: 'Open Sans';
+	.font(17px;20px;bold;#444444);
 	text-transform: uppercase;
-	display: inline-block;
-	vertical-align: top;
+	.inline_block();
 	text-align: center;
 	box-sizing: border-box;
 	border: 2px solid #444444;
@@ -15,5 +10,44 @@
 		padding: 14px 0px;
 		width: 100%;
 		margin-bottom: 35px;
+	}
+	&-order:active {
+		background-color: #444444;
+		color: rgba(255,255,255, 0.3);
+	}
+	&-breadcrumbs {
+		width: 100%;
+		padding: 25px 161px 30px 29px;
+		position: relative;
+		border: none;
+		text-align: left;
+		.font(19px,24px,bold,#ffffff);
+		text-transform: none;
+		&__icon {
+			position: absolute;
+			fill: #149080;
+			fill-opacity: 0.5;
+		}
+		&__icon-interior {
+			top: 23px;
+			right: 37px;
+		}
+		&__icon-toy {
+			top: 21px;
+			right: 27px;
+		}
+	}
+	&-breadcrumbs:active {
+		color: rgba(255,255,255, 0.3);
+	}
+	&-breadcrumbs:active &-breadcrumbs__icon {
+		fill-opacity: 0.3;
+	}
+	&-interior {
+		background-color: #63d1bb;
+	}
+	&-toy {
+		background-color: #56c3b2;
+		margin-bottom: 27px;
 	}
 }
