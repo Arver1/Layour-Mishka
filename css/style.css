@@ -221,86 +221,6 @@
         flex-basis: 50%;
   }
 }
-.user-block-list {
-  font-size: 17px;
-  line-height: 24px;
-  font-weight: bold;
-  color: #000;
-  font-family: 'Open Sans';
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: block;
-  position: absolute;
-  outline: 1px solid red;
-  /*@media @desktop_width {
-		display: flex;
-		flex-basis: 350px;
-		justify-content: flex-end;
-		padding: 37px 0px 35px;
-	}*/
-}
-.user-block-list__item {
-  position: relative;
-}
-.user-block-list__item:hover {
-  color: rgba(0, 0, 0, 0.6);
-  cursor: pointer;
-}
-.user-block-list__item:hover .user-block-list__icon-cart,
-.user-block-list__icon-search:hover {
-  fill: #63d1bb;
-  fill-opacity: 1;
-}
-.user-block-list__item:active {
-  color: rgba(0, 0, 0, 0.3);
-}
-.user-block-list__item:active .user-block-list__icon-cart,
-.user-block-list__icon-search:active {
-  fill: #63d1bb;
-  fill-opacity: 0.3;
-}
-.user-block-list__item-search {
-  font-size: 0;
-}
-@media (min-width: 768px) {
-  .user-block-list {
-    position: static;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-preferred-size: 358px;
-        flex-basis: 358px;
-    -ms-flex-pack: end;
-        justify-content: flex-end;
-  }
-  .user-block-list__item-search {
-    -ms-flex-preferred-size: 84px;
-        flex-basis: 84px;
-    box-sizing: border-box;
-    padding: 31px 0px 33px;
-    border-right: 1px solid #ececec;
-    border-left: 1px solid #ececec;
-  }
-  .user-block-list__item-basket {
-    -ms-flex-preferred-size: 274px;
-        flex-basis: 274px;
-    box-sizing: border-box;
-    text-align: right;
-    padding: 31px 10px 33px 0px;
-  }
-  .user-block-list__icon-cart {
-    position: absolute;
-    fill-opacity: 0.2;
-    top: 34px;
-    left: 32px;
-  }
-  .user-block-list__icon-search {
-    position: absolute;
-    fill-opacity: 0.2;
-    top: 36px;
-    left: 33px;
-  }
-}
 .page-main {
   width: 320px;
   margin: 0 auto 30px;
@@ -364,6 +284,7 @@
   text-align: center;
   box-sizing: border-box;
   border: 2px solid #444444;
+  cursor: pointer;
 }
 .btn-order {
   padding: 14px 0px;
@@ -478,6 +399,17 @@
 .btn-copyright:active .btn-copyright__icon {
   fill-opacity: 0.3;
 }
+.btn-order-submit {
+  width: 100%;
+  padding: 18px 0;
+  border: none;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  color: #fff;
+  font-family: 'Open Sans';
+  background-color: #63d1bb;
+}
 .goods {
   padding: 0 30px;
 }
@@ -528,6 +460,16 @@
   color: #000;
   font-family: 'Open Sans';
   margin-bottom: 26px;
+}
+.goods__order-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: none;
+  z-index: 200;
 }
 .advantages__title {
   margin: 0;
@@ -754,4 +696,65 @@
   padding: 23px 61px 27px 57px;
   box-sizing: border-box;
   border-bottom: 1px solid #e5e5e5;
+}
+.goods-order {
+  margin: 100px auto;
+  padding: 29px 30px 0;
+  width: 260px;
+  height: 305px;
+  border: 1px solid #c7c7c7;
+  background-color: #fff;
+  box-shadow: 0px 9px 16px -7px #000;
+}
+.goods-order__title {
+  margin: 0;
+  padding: 0 50px;
+  margin-bottom: 12px;
+  text-align: center;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #000;
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+}
+.goods-order__form-fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.goods-order__form-fieldset legend {
+  text-align: center;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: normal;
+  color: #444444;
+  font-family: 'Open Sans';
+  padding: 0;
+  margin-bottom: 23px;
+}
+.goods-order__form-fieldset input {
+  display: none;
+}
+.goods-order__form-fieldset input:checked + .label-size {
+  border: 2px solid #63d1bb;
+}
+.label-size {
+  display: inline-block;
+  vertical-align: top;
+  width: 82px;
+  box-sizing: border-box;
+  border: 2px solid #ececec;
+  padding: 16px 0;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  color: #444444;
+  font-family: 'Open Sans';
+  cursor: pointer;
+}
+.label-size ~ .label-size {
+  margin-left: 3px;
 }
