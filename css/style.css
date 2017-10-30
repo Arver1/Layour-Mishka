@@ -736,6 +736,7 @@
   width: 320px;
   height: 457px;
   position: relative;
+  background: url('../../img/map-mobile@1x.jpg');
 }
 .map__pin {
   position: absolute;

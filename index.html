@@ -189,7 +189,6 @@
 				</table>
 			</div>
 			<div class="map__wrapper">
-				<img src="/img/map-mobile@1x.jpg" width="320" height="457" alt="map" title="map">
 				<div class="map__pin-wrapper">
 					<svg class="map__pin" width="66" height="101">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#map_pin"></use>
@@ -209,5 +208,23 @@
 	</footer>
 	<script src="js/util.js"></script>
 	<script src="js/script.js"></script>
+	<script src="https://api-maps.yandex.ru/2.0/?load=package.standard&mode=debug&lang=ru-RU" type="text/javascript"></script>
+    <script>
+       ymaps.ready(init);
+        var myMap, myPlacemark;
+        function init() { 
+            myMap = new ymaps.Map ("YMapsID", {
+                center: [59.938631, 30.323055],
+                zoom: 17
+            });
+            myPlacemark = new ymaps.Placemark ([59.93863106, 30.32305450], {}, {
+                iconImageHref: 'img/icon-map-pin.svg',
+                iconImageSize: [66, 101],
+                iconImageOffset: [-35, -95]
+            });
+            myMap.geoObjects.add(myPlacemark);
+            myMap.controls.add('zoomControl');
+          }
+    </script>
 </body>
 </html>

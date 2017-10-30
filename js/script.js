@@ -4,6 +4,10 @@
 	var burgerMenu = mainNav.querySelector('.main-nav__toggle');
 	var burgerMenuList = mainNav.querySelector('.main-nav__list');
 	var userBlockList = mainNav.querySelector('.user-block-list');
+	var mapWrapper = document.querySelector('.map__wrapper');
+	mapWrapper.setAttribute('id','YMapsID');
+	mapWrapper.style.width = '320px';
+	mapWrapper.style.height = '457px';
 	function showMenu(menu) {
 		menu.style.display = "block";
 	};
