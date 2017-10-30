@@ -3,7 +3,9 @@
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	display: none;
+	display: block;
+	position: absolute;
+	outline: 1px solid red;
 	&__item {
 		position: relative;
 	}
@@ -28,6 +30,7 @@
 		font-size: 0;
 	}
 	@media @tablet_width {
+		position: static;
 		display: flex;
 		flex-basis: 358px;
 		justify-content: flex-end;
