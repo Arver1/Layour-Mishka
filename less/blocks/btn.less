@@ -1,13 +1,8 @@
 .btn {
 	text-decoration: none;
-	color: #444444;
-	font-size: 17px;
-	line-height: 20px;
-	font-weight: bold;
-	font-family: 'Open Sans';
+	.font(17px;20px;bold;#444444);
 	text-transform: uppercase;
-	display: inline-block;
-	vertical-align: top;
+	.inline_block();
 	text-align: center;
 	box-sizing: border-box;
 	border: 2px solid #444444;
@@ -15,5 +10,104 @@
 		padding: 14px 0px;
 		width: 100%;
 		margin-bottom: 35px;
+	}
+	&-order:active,
+	&-write-us:active,
+	&-write-reviews:active {
+		background-color: #444444;
+		color: rgba(255,255,255, 0.3);
+	}
+	&-breadcrumbs {
+		width: 100%;
+		padding: 25px 161px 30px 29px;
+		position: relative;
+		border: none;
+		text-align: left;
+		.font(19px,24px,bold,#ffffff);
+		text-transform: none;
+		&__icon {
+			position: absolute;
+			fill: #149080;
+			fill-opacity: 0.5;
+		}
+		&__icon-interior {
+			top: 23px;
+			right: 37px;
+		}
+		&__icon-toy {
+			top: 21px;
+			right: 27px;
+		}
+	}
+	&-breadcrumbs:active {
+		color: rgba(255,255,255, 0.3);
+	}
+	&-breadcrumbs:active &-breadcrumbs__icon {
+		fill-opacity: 0.3;
+	}
+	&-interior {
+		background-color: #63d1bb;
+	}
+	&-toy {
+		background-color: #56c3b2;
+		margin-bottom: 27px;
+	}
+	&-write-reviews {
+		padding: 14px 0;
+		width: 100%;
+		margin-bottom: 51px;
+	}
+	&-write-us {
+		width: 260px;
+		margin-left: 29px;
+		margin-right: 31px;
+		margin-bottom: 10px;
+		padding: 14px 0;
+	}
+	&-instagram,
+	&-twitter {
+		padding-top: 6px;
+	}
+	&-instagram,
+	&-facebook,
+	&-twitter {
+		font-size: 0;
+		line-height: 0;
+		border: none;
+	}
+	&-instagram:active &-instagram__icon,
+	&-facebook:active &-facebook__icon,
+	&-twitter:active &-twitter__icon {
+		fill: #46c1ae;
+		fill-opacity: 0.3;
+	}
+	&-instagram {
+		margin-right: 37px;
+	}
+	&-facebook {
+		margin-right: 36px;
+	}
+	&-copyright {
+		font-size: 0;
+		border: none;
+		width: 100%;
+		padding: 23px 38px;
+		&__text {
+			.font(19px;18px);
+			text-transform: none;
+			padding-top: 5px;
+			.inline_block();
+			margin-right: 29px;
+			margin-bottom: 10px;
+		}
+		&__icon {
+			fill: #63d1bb;
+		}
+		&:active &__text {
+			color: rgba(0,0,0, 0.3);
+		}
+		&:active &__icon{
+			fill-opacity: 0.3;
+		}
 	}
 }

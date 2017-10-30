@@ -6,11 +6,41 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-end;
-	&__title {
-		display: none;
-	}
 	&__link-logo {
 		margin-right: 67px;
+		.inline_block();
+		cursor: pointer;
 	}
+	&__link-logo:hover {
+		opacity: 0.6;
+	}
+	&__link-logo:active {
+		opacity: 0.3;
+	}
+	@media @tablet_width {
+		width: 688px;
+		padding: 0 50px;
+		&__link-logo {
+			margin-right: auto;
+			.inline_block();
+			flex-basis: 113px;
+			height: 46px;
+			padding-top: 22px;
+			padding-left: 8px;
+		}
+		&__logo-img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	/*
+	@media @desktop_width {
+		width: 1050px;
+		padding: 0 50px;
+		&__logo-img {
+			width: 100%;
+			height: auto;
+		}
+	}*/
 }
 

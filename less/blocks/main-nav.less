@@ -1,3 +1,8 @@
+@keyframes burger {
+	to {
+		transform: scale(0);
+	}
+}
 .main-nav {
 	padding-top: 16px;
 	&__toggle {
@@ -6,6 +11,7 @@
 		height: 2px;
 		background-color: #000000;
 		position: relative;
+		cursor: pointer;
 	}
 	&__toggle::before,
 	&__toggle::after {
@@ -13,24 +19,62 @@
 		display: block;
 		position: absolute;
 		width: 20px;
-		height: 2px;
-		background-color: #000000;
+		height: 6px;
 	}
 	&__toggle::before {
 		top: -6px;
 		left: 0;
+		background: linear-gradient(to top, transparent 66.6%, #000 33.3%);
 	}
 	&__toggle::after {
 		bottom: -6px;
 		left: 0;
+		background: linear-gradient(to bottom, transparent 66.6%, #000 33.3%);
 	}
 	&__list {
 		display: none;
-		font-size: 17px;
-		line-height: 24px;
-		font-weight: bold;
-		color: #000000;
-		font-family: 'Open Sans';
+		.font(17px);
 		list-style: none;
+		margin: 0;
+		padding: 0;
 	}
+	&__link {
+		text-decoration: none;
+		color: #000;
+		cursor: pointer;
+	}
+	&__link:hover {
+		opacity: 0.6;
+	}
+	&__link:active {
+		opacity: 0.3;
+	}
+	@media @tablet_width {
+		align-self: flex-end;
+		flex-grow: 1;
+		position: relative;
+		&__toggle {
+			display: none;
+		}
+		&__list {
+			display: flex;
+			width: 334px;
+			position: absolute;
+			top: 34px;
+			left: -111px;
+			.font();
+			&__item {
+				flex-basis: 50%;
+			}
+		}
+	}
+	/*@media @desktop_width {
+		&__toggle {
+			display: none;
+		}
+		&__list {
+			display: none;
+			position: absolute;
+		}
+	}*/
 }
