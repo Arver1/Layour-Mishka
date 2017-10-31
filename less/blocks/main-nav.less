@@ -94,35 +94,91 @@
 		color: #000;
 		cursor: pointer;
 	}
-	&__link:hover {
-		opacity: 0.6;
+	&__link:hover,
+	&__list__item span:hover {
+		color: rgba(0,0,0, 0.6);
 	}
 	&__link:active,
 	&__list__item span:active {
 		color: rgba(0,0,0, 0.3);
 	}
-	&__list__item span:active {
-		fill: #46c1ae;
+	&__list__item span:focus {
+		outline: none;
+	}
+	&__list__item span:hover &__icon-cart,
+	&__list__item span:hover &__icon-search,
+	&__icon-search:hover {
+		fill: #63d1bb;
+		fill-opacity: 1.0;
+	}
+	&__list__item span:active &__icon-cart,
+	&__list__item span:active &__icon-search,
+	&__icon-search:active {
+		fill: #63d1bb;
 		fill-opacity: 0.3;
 	}
 	@media @tablet_width {
-		align-self: flex-end;
+		padding-top: 0;
+		flex-basis: 358px;
 		flex-grow: 1;
-		position: relative;
+		display: flex;
 		&__toggle {
 			display: none;
 		}
 		&__list {
+			flex-basis: 100%;
 			display: flex;
-			width: 334px;
-			position: absolute;
-			top: 34px;
-			left: -111px;
+			justify-content: flex-end;
+			flex-wrap: wrap;
+			position: static; 
 			.font();
-			&__item {
-				flex-basis: 50%;
+			&__item-catalog,
+			&__item-order {
+				position: absolute;
+				padding: 0;
+				border: none;
+			}
+			&__item-catalog {
+				bottom: -42px;
+				left: -112px;
+			}
+			&__item-order {
+				bottom: -42px;
+				left: 57px;
+			}
+			&__item-basket {
+				padding: 30px 0 33px;
+				flex-basis: 274px;
+				.font(17px;24px);
+			}
+			&__item-search {
+				flex-basis: 84px;
+				padding: 14px 0 33px;
+				border-left: 1px solid #ececec;
+				border-right: 1px solid #ececec;
+			}
+			&__item span {
+				.inline_block();
+				width: 100%;
+				box-sizing: border-box;
+				padding: 0 9px 0 0;
+				text-align: right;
+				position: relative;
+				cursor: pointer;
 			}
 		}
+		&__icon-cart {
+			top: 3px;
+			left: 32px;
+		}
+		&__icon-search {
+			top: 22px;
+			left: 33px;
+		}
+		&__list__item &__search {
+			font-size: 0;
+		}
+		
 	}
 	/*@media @desktop_width {
 		&__toggle {
