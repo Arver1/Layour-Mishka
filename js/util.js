@@ -4,10 +4,12 @@
 		ESC_KEYCODE: '27',
 		ENTER_KEYCODE: '13',
 		showPopUp: function (container) {
-			container.style.display = "block";
+			if(container.classList.contains('visually-hidden')) {
+				container.classList.remove('visually-hidden');
+			}
 		},
 		closePopUp: function (container) {
-			container.style.display = "none";
+			container.classList.add('visually-hidden');
 		}
 	};
 })();

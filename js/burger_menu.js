@@ -17,12 +17,12 @@
 		if (burgerMenu.classList.contains('main-nav__toggle-open')) {
 			burgerMenu.classList.remove('main-nav__toggle-open');
 			burgerMenu.classList.add('main-nav__toggle');
-			window.util.closePopUp(burgerMenuList);
+			burgerMenu.classList.add('main-nav__toggle-hide');
 		}
 		else if (burgerMenu.classList.contains('main-nav__toggle')) {
 			burgerMenu.classList.remove('main-nav__toggle');
+			burgerMenu.classList.remove('main-nav__toggle-hide');
 			burgerMenu.classList.add('main-nav__toggle-open');
-			window.util.showPopUp(burgerMenuList);
 		}
 	};
 	burgerMenu.addEventListener('click', toggle);

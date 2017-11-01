@@ -9,4 +9,23 @@
 		box-sizing: border-box;
 		border-bottom: 1px solid #e5e5e5;
 	}
+	&__footer-logo {
+		display: none;
+	}
+	@media @tablet_width {
+		width: 668px;
+		padding: 51px 50px 43px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		&__wrapper {
+			width: 142px;
+			padding: 6px 0 0;
+			border: none;
+		}
+		&__footer-logo {
+			display: block;
+			margin-right: 77px;
+		}
+	}
 }

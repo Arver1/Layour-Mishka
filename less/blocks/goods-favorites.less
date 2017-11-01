@@ -1,14 +1,15 @@
 .goods-favorites {
+	word-wrap: break-word;
 	&__title {
 		margin: 0 0 5px;
 		padding: 0px 30px;
-		.font(25px;30px;bold;#000);
+		.font(25px;30px);
 	}
 	&__important {
 		.inline_block();
 		padding: 0px 30px;
 		margin-bottom: 8px;
-		.font(17px;20px;bolf;#63d1bb);
+		.font(17px;20px;bold;#63d1bb);
 		text-transform: uppercase;
 	}
 	&::after {
@@ -18,5 +19,39 @@
 		background: url('../../img/zigzag-line.svg') repeat-x;
 		width: 320px;
 		height: 7px;
+	}
+	@media @tablet_width {
+		position: relative;
+		width: 668px;
+		padding: 0 50px 20px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		&__title {
+			flex-basis: 501px;
+			margin: 0 0 49px;
+			padding: 0;
+			.font(43px;50px);
+		}
+		&__important {
+			.inline_block();
+			flex-basis: 167px;
+			box-sizing: border-box;
+			text-align: center;
+			padding: 12px 27px 0 67px;
+			.font(17px;17px;bold;#63d1bb);
+			text-transform: uppercase;
+		}
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			background: url('../../img/bg-zigzag-line.svg') no-repeat;
+			background-size: auto 17px;
+			height: 17px;
+			bottom:0;
+			left: 0;
+			width: 100%;
+	}
 	}
 }
