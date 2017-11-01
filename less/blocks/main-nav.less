@@ -1,6 +1,9 @@
 .main-nav {
 	padding-top: 9px;
 	position: relative;
+	&__toggle-hide + &__list {
+		display: none;
+	}
 	&__toggle {
 		display: block;
 		width: 20px;
@@ -52,7 +55,6 @@
 	}
 	&__list {
 		z-index: 20;
-		display: none;
 		position: absolute;
 		.font(17px);
 		list-style: none;
@@ -124,6 +126,9 @@
 		display: flex;
 		&__toggle {
 			display: none;
+		}
+		&__toggle-hide + &__list {
+			display: flex;
 		}
 		&__list {
 			flex-basis: 100%;
