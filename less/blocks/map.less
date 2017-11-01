@@ -56,4 +56,33 @@
 		top: 165px;
 		left: 124px;
 	}
+	&__icon-flag {
+		display: none;
+	}
+	@media @tablet_width {
+		width: 768px;
+		&__details caption {
+			text-align: left;
+			.font(43px;50px);
+			padding-left: 46px;
+			padding-top: 26px;
+			padding-bottom: 16px;
+			margin-right: 53px;
+			position: relative;
+		}
+		&__icon-flag {
+			display: block;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+		&__details tr{
+			width: 300px;
+		}
+		&__details__item-dt,
+		&__details__item-dd {
+			padding: 0;
+			width: 0;
+		}
+	}
 }

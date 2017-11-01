@@ -21,8 +21,9 @@
 		height: 7px;
 	}
 	@media @tablet_width {
+		position: relative;
 		width: 668px;
-		padding: 0 50px;
+		padding: 0 50px 20px;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -42,7 +43,15 @@
 			text-transform: uppercase;
 		}
 		&::after {
-			display: none;
-		}
+			content: "";
+			display: block;
+			position: absolute;
+			background: url('../../img/bg-zigzag-line.svg') no-repeat;
+			background-size: auto 17px;
+			height: 17px;
+			bottom:0;
+			left: 0;
+			width: 100%;
+	}
 	}
 }

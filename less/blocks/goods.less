@@ -49,31 +49,34 @@
 	}
 	@media @tablet_width {
 		padding: 0;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
 		position: relative;
 		&__description-details {
 			margin: 0;
 			padding: 0;
+			padding-right: 44px;
 			.font(17px;30px;normal;#444444);
 			margin-bottom: 36px;
 		}
 		&__description-feature {
-			outline: 1px solid red;
-			margin-bottom: 0px;
+			margin-bottom: 38px;
 			border-collapse: collapse;
 			.font(15px;20px;normal;#444444);
 		}
-		& picture {
+		& img {
 			padding-top: 8px;
+			position: absolute;
+			top: 0;
+			right: 0;
 		}
 		&__description-wrapper {
-			width: 290px;
+			position: relative;
+			padding-right: 334px;
+			min-height: 412px;
 		}
 		&__description-price {
 			margin-bottom: 33px;
 			padding-top: 18px;
+			padding-right: 44px;
 			.font(20px;24px;bold;#444444);
 		}
 	}

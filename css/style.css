@@ -409,8 +409,9 @@
 }
 @media (min-width: 768px) {
   .goods-favorites {
+    position: relative;
     width: 668px;
-    padding: 0 50px;
+    padding: 0 50px 20px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -445,7 +446,15 @@
     text-transform: uppercase;
   }
   .goods-favorites::after {
-    display: none;
+    content: "";
+    display: block;
+    position: absolute;
+    background: url('../../img/bg-zigzag-line.svg') no-repeat;
+    background-size: auto 17px;
+    height: 17px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
   }
 }
 .btn {
@@ -636,9 +645,18 @@
     padding-bottom: 20px;
   }
   .btn-order {
-    padding: 14px 0px;
-    width: 100%;
-    margin-bottom: 4px;
+    padding: 15px 0px 13px 0;
+    width: 290px;
+    margin-bottom: 52px;
+  }
+  .btn-write-reviews {
+    -ms-flex-order: -1;
+        order: -1;
+    -ms-flex-preferred-size: 175px;
+        flex-basis: 175px;
+    margin-right: 50px;
+    margin-bottom: 46px;
+    padding: 16px 0 12px;
   }
 }
 .goods {
@@ -707,17 +725,12 @@
 @media (min-width: 768px) {
   .goods {
     padding: 0;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
     position: relative;
   }
   .goods__description-details {
     margin: 0;
     padding: 0;
+    padding-right: 44px;
     font-size: 17px;
     line-height: 30px;
     font-weight: normal;
@@ -726,8 +739,7 @@
     margin-bottom: 36px;
   }
   .goods__description-feature {
-    outline: 1px solid red;
-    margin-bottom: 0px;
+    margin-bottom: 38px;
     border-collapse: collapse;
     font-size: 15px;
     line-height: 20px;
@@ -735,15 +747,21 @@
     color: #444444;
     font-family: 'Open Sans';
   }
-  .goods picture {
+  .goods img {
     padding-top: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
   .goods__description-wrapper {
-    width: 290px;
+    position: relative;
+    padding-right: 334px;
+    min-height: 412px;
   }
   .goods__description-price {
     margin-bottom: 33px;
     padding-top: 18px;
+    padding-right: 44px;
     font-size: 20px;
     line-height: 24px;
     font-weight: bold;
@@ -811,6 +829,65 @@
 .advantages__feature-icon-6 {
   top: -49px;
   left: 2px;
+}
+@media (min-width: 768px) {
+  .advantages {
+    width: 668px;
+    padding: 0 50px;
+  }
+  .advantages__title {
+    margin: 0;
+    padding: 47px 0 0;
+    font-size: 43px;
+    line-height: 50px;
+    font-weight: bold;
+    color: #000;
+    font-family: 'Open Sans';
+  }
+  .advantages__list {
+    padding: 100px 0 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .advantages__list__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: bold;
+    color: #000;
+    font-family: 'Open Sans';
+    margin-bottom: 108px;
+  }
+  .advantages__list__item-material {
+    padding-top: 3px;
+  }
+  .advantages__list__item-handmade {
+    -ms-flex-order: 1;
+        order: 1;
+  }
+  .advantages__list__item-good-price {
+    -ms-flex-order: 2;
+        order: 2;
+  }
+  .advantages__list__item-our-producer {
+    -ms-flex-order: 3;
+        order: 3;
+  }
+  .advantages__list__item-likes {
+    -ms-flex-order: 4;
+        order: 4;
+  }
+  .advantages__list__item-with-box {
+    -ms-flex-order: 5;
+        order: 5;
+  }
+  .advantages__list__item-likes,
+  .advantages__list__item-with-box:last-of-type {
+    margin-bottom: 82px;
+  }
 }
 .reviews {
   position: relative;
@@ -895,6 +972,79 @@
   left: 0;
   bottom: 0;
 }
+@media (min-width: 768px) {
+  .reviews {
+    padding: 0;
+    background: #fff url("../../img/review@1x.jpg") no-repeat;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-top: 79px;
+    padding-bottom: 82px;
+  }
+  .reviews__title {
+    margin: 0;
+    margin-right: auto;
+    font-size: 43px;
+    line-height: 50px;
+    font-weight: bold;
+    color: #000;
+    font-family: 'Open Sans';
+    -ms-flex-order: -2;
+        order: -2;
+    padding-left: 46px;
+    padding-top: 0;
+  }
+  .reviews__quote {
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: normal;
+    color: #444444;
+    font-family: 'Open Sans';
+    padding: 0 49px;
+    margin-bottom: 38px;
+  }
+  .reviews__author {
+    padding-top: 20px;
+    padding-left: 50px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #000;
+    font-family: 'Open Sans';
+    -ms-flex-preferred-size: 334px;
+        flex-basis: 334px;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+  .reviews__prev,
+  .reviews__next {
+    -ms-flex-preferred-size: 83px;
+        flex-basis: 83px;
+    margin: 0;
+    margin-top: 35px;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    padding: 0;
+    border: none;
+  }
+  .reviews__next {
+    margin-left: 4px;
+    margin-right: 52px;
+  }
+  .reviews::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: url('../../img/bg-zigzag-line.svg') no-repeat;
+    background-size: auto 17px;
+    width: 100%;
+    height: 17px;
+    left: 0;
+    bottom: 0;
+  }
+}
 .map__details {
   border-collapse: collapse;
   width: 100%;
@@ -964,6 +1114,41 @@
   position: absolute;
   top: 165px;
   left: 124px;
+}
+.map__icon-flag {
+  display: none;
+}
+@media (min-width: 768px) {
+  .map {
+    width: 768px;
+  }
+  .map__details caption {
+    text-align: left;
+    font-size: 43px;
+    line-height: 50px;
+    font-weight: bold;
+    color: #000;
+    font-family: 'Open Sans';
+    padding-left: 46px;
+    padding-top: 26px;
+    padding-bottom: 16px;
+    margin-right: 53px;
+    position: relative;
+  }
+  .map__icon-flag {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .map__details tr {
+    width: 300px;
+  }
+  .map__details__item-dt,
+  .map__details__item-dd {
+    padding: 0;
+    width: 0;
+  }
 }
 .page-footer {
   width: 260px;
