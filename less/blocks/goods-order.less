@@ -1,8 +1,8 @@
 .goods-order {
+	box-sizing: border-box;
 	margin: 100px auto;
-	padding: 29px 30px 0;
-	width: 260px;
-	height: 305px;
+	padding: 29px 30px 26px;
+	width: 320px;
 	border: 1px solid #c7c7c7;
 	background-color: #fff;
 	box-shadow: 0px 9px 16px -7px #000;
@@ -30,5 +30,26 @@
 		& input:checked + .label-size {
 			border: 2px solid #63d1bb;
 		}
+	}
+	@media @tablet_width {
+		width: 568px;
+		padding: 34px 102px 0px;
+		&__title {
+			.font(30px;57px);
+			text-align: left;
+			padding: 0;
+			padding-left: 6px;
+			margin-bottom: 13px;
+		}
+		&__form-fieldset {
+			padding: 0 6px;
+			& legend {
+				.font(17px;30px;normal;#444444);
+				margin-bottom: 21px;
+			}
+			& input:checked + .label-size {
+				border: 2px solid #63d1bb;
+			}
+	}
 	}
 }
