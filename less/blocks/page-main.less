@@ -60,8 +60,48 @@
 				.font(15px;24px;normal;#444444);
 			}
 			&__item--thickness {
-				display: block;
+				.inline_block();
 			}
+		}
+	}
+	@media @desktop_width {
+		width: 1250px;
+		&__wrapper {
+			padding: 17px 100px 0;
+			background: #fafafa url('../../img/hero-desktop@1x.jpg') 50% 0 no-repeat;
+			background-size: cover;
+			margin-bottom: 64px;
+		}
+		&__title {
+			.font(53px;57px);
+			flex-basis: 100%;
+			padding: 62px 0 360px;
+		}
+		&__special-offers-list {
+			order: -1;
+			flex-basis: 100%;
+			position: static;
+			margin-bottom: 50px;
+			&__item {
+				.inline_block();
+			}
+			&__item:nth-of-type(2) {
+				margin-left: 62px;
+				margin-right: auto;
+			}
+		}
+		&__link {
+			.font();
+			text-decoration: none;
+		}
+		&__link:hover {
+			opacity: 0.6;
+		}
+		&__link:active {
+			opacity: 0.3;
+		}
+		&__wrapper::after {
+			background-size: auto 34px;
 		}
 	}
 }
