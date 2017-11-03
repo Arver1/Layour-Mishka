@@ -107,7 +107,7 @@
 		<h1 class="visually-hidden">Магазин &laquo;Мишка&raquo; - изделия ручной работы для дома</h1> <!-- скрыт -->
 		<a class="page-header__link-logo">
 			<picture>
-				<!-- временно <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg 149w" /> -->
+				<source media="(min-width: 1050px)" srcset="img/logo-desktop.svg 149w" />
 				<source media="(min-width: 768px)" srcset="img/logo-tablet.svg 113w" />
 				<img class="page-header__logo-img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип" title="Логотип">
 			</picture>
@@ -174,6 +174,7 @@
 							</tr>
 						</table>
 						<picture>
+							<source media="(min-width: 1050px)" srcset="img/triple-set-desktop@1x.jpg"/>
 							<source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg"/>
 							<img src="img/triple-set-mobile@1x.jpg" alt="baskets" title="baskets">
 						</picture>
@@ -241,12 +242,13 @@
 						<td class="map__details__item map__details__item-dd">г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис 101</td>
 					</tr>
 				</table>
-			</div>
 			<div class="map__wrapper">
-				<div class="map__pin-wrapper">
-					<svg class="map__pin" width="66" height="101">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#map_pin"></use>
-					</svg>
+				<div class="map__yandex-wrapper">
+					<div class="map__pin-wrapper">
+						<svg class="map__pin" width="66" height="101">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#map_pin"></use>
+						</svg>
+					</div>
 				</div>
 			</div>
 			<a class="btn btn-write-us" href="#">Напишите нам</a>
@@ -268,8 +270,9 @@
 	<script src="js/index_popUp.js"></script>
 	<script src="https://api-maps.yandex.ru/2.0/?load=package.standard&mode=debug&lang=ru-RU" type="text/javascript"></script>
 	<script>
-		var mapWrapper = document.querySelector('.map__wrapper');
+		var mapWrapper = document.querySelector('.map__yandex-wrapper');
 		mapWrapper.style.width = "100%"
+		mapWrapper.style.height = "100%"
 		mapWrapper.setAttribute('id','YMapsID');
 		ymaps.ready(init);
 		var myMap, myPlacemark;
