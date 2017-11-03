@@ -119,4 +119,32 @@
 			bottom: 0;
 		}
 	}
+	@media @desktop_width {
+		width: 1050px;
+		padding: 70px 100px 136px;
+		background: #fff url("../../img/review@1x.jpg") 100px 0 no-repeat;
+		&__title {
+			.font(53px;57px);
+			padding-left: 170px;
+		}
+		&__quote {
+			padding: 0 100px 0 175px;
+			margin-bottom: 20px;
+		}
+		&__author {
+			padding-left: 174px;
+			word-spacing: -3px;
+		}
+		&__next {
+			margin-left: 4px;
+			margin-right: 4px;
+		}
+		&::after {
+			background: url('../../img/bg-zigzag-line.svg') no-repeat;
+			background-size: auto 23px;
+			height: 23px;
+			left: 100px;
+			width: 1050px;
+		}
+	}
 }

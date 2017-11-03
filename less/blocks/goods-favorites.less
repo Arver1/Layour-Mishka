@@ -55,6 +55,7 @@
 		}
 	}
 	@media @desktop_width {
+		position: relative;
 		width: 1050px;
 		padding: 52px 100px 0;
 		justify-content: flex-start;
@@ -66,6 +67,15 @@
 		&__important {
 			order: -1;
 			padding: 16px 20px 0;
+		}
+		&::after {
+			background: url('../../img/bg-zigzag-line.svg') no-repeat;
+			background-size: auto 23px;
+			width: 320px;
+			height: 23px;
+			width: 1050px;
+			bottom:0;
+			left: 100px;
 		}
 	}
 }

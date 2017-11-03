@@ -66,11 +66,11 @@
 	}
 	@media @desktop_width {
 		width: 1250px;
+		margin-bottom: 106px;
 		&__wrapper {
-			padding: 17px 100px 0;
+			padding: 19px 100px 10px;
 			background: #fafafa url('../../img/hero-desktop@1x.jpg') 50% 0 no-repeat;
-			background-size: cover;
-			margin-bottom: 64px;
+			margin-bottom: 52px;
 		}
 		&__title {
 			.font(53px;57px);
@@ -101,7 +101,9 @@
 			opacity: 0.3;
 		}
 		&__wrapper::after {
+			background-repeat: repeat-x;
 			background-size: auto 34px;
+			height: 34px;
 		}
 	}
 }

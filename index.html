@@ -242,12 +242,13 @@
 						<td class="map__details__item map__details__item-dd">г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис 101</td>
 					</tr>
 				</table>
-			</div>
 			<div class="map__wrapper">
-				<div class="map__pin-wrapper">
-					<svg class="map__pin" width="66" height="101">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#map_pin"></use>
-					</svg>
+				<div class="map__yandex-wrapper">
+					<div class="map__pin-wrapper">
+						<svg class="map__pin" width="66" height="101">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#map_pin"></use>
+						</svg>
+					</div>
 				</div>
 			</div>
 			<a class="btn btn-write-us" href="#">Напишите нам</a>
@@ -269,8 +270,9 @@
 	<script src="js/index_popUp.js"></script>
 	<script src="https://api-maps.yandex.ru/2.0/?load=package.standard&mode=debug&lang=ru-RU" type="text/javascript"></script>
 	<script>
-		var mapWrapper = document.querySelector('.map__wrapper');
+		var mapWrapper = document.querySelector('.map__yandex-wrapper');
 		mapWrapper.style.width = "100%"
+		mapWrapper.style.height = "100%"
 		mapWrapper.setAttribute('id','YMapsID');
 		ymaps.ready(init);
 		var myMap, myPlacemark;
