@@ -3,13 +3,13 @@
 	window.util = {
 		ESC_KEYCODE: '27',
 		ENTER_KEYCODE: '13',
-		showPopUp: function (container) {
-			if(container.classList.contains('visually-hidden')) {
-				container.classList.remove('visually-hidden');
+		showPopUp: function (container, classHide) {
+			if(container.classList.contains(classHide)) {
+				container.classList.remove(classHide);
 			}
 		},
-		closePopUp: function (container) {
-			container.classList.add('visually-hidden');
+		closePopUp: function (container, classHide) {
+			container.classList.add(classHide);
 		}
 	};
 })();
