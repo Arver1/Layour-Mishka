@@ -23,56 +23,6 @@
   background-color: #ffffff;
   width: 320px;
   margin: 0 auto;
-  /*
-	background-color: #ffffff;
-	width: 260px;
-	padding: 22px 31px 18px 30px;
-	margin: 0 auto;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-end;
-	&__link-logo {
-		margin-right: 67px;
-		.inline_block();
-		cursor: pointer;
-	}
-	&__link-logo:hover {
-		opacity: 0.6;
-	}
-	&__link-logo:active {
-		opacity: 0.3;
-	}
-	@media @tablet_width {
-		width: 688px;
-		padding: 0 50px;
-		display: flex;
-		flex-wrap: wrap;
-		&__link-logo {
-			margin-right: auto;
-			.inline_block();
-			flex-basis: 113px;
-			height: 46px;
-			padding-top: 22px;
-			padding-left: 8px;
-		}
-		&__logo-img {
-			width: 100%;
-			height: auto;
-		}
-	}
-	@media @desktop_width {
-		position: relative;
-		width: 1050px;
-		padding: 0 100px;
-		&__link-logo {
-			flex-basis: 149px;
-			height: 72px;
-			margin: 0;
-			padding: 9px 0 0;
-			margin-right: 93px;
-		}
-	}
-	*/
 }
 @media (min-width: 768px) {
   .page-header {
@@ -88,12 +38,11 @@
   }
 }
 .main-nav__wrapper {
-  padding: 0 30px 18px;
+  padding: 22px 30px 18px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-top: 22px;
 }
 .main-nav__link-logo {
   margin-left: auto;
@@ -102,6 +51,13 @@
   vertical-align: top;
   text-align: center;
   padding-left: 20px;
+}
+.main-nav__link-logo:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+.main-nav__link-logo:active {
+  opacity: 0.3;
 }
 .main-nav__items--hidden,
 .main-nav__user-block-items--hidden {
@@ -179,6 +135,20 @@
 .main-nav__user-block-item {
   padding-left: 30px;
 }
+.main-nav__user-block-item:hover,
+.main-nav__cart:hover,
+.main-nav__link:hover {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.6);
+}
+.main-nav__user-block-item:active,
+.main-nav__cart:active,
+.main-nav__link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+.main-nav__cart:focus {
+  outline: none;
+}
 .main-nav__search,
 .main-nav__cart {
   padding-left: 45px;
@@ -193,6 +163,18 @@
 .main-nav__icon-cart {
   position: absolute;
   fill-opacity: 0.2;
+}
+.main-nav__icon-search:hover,
+.main-nav__icon-cart:hover,
+.main-nav__cart:hover .main-nav__icon-cart {
+  cursor: pointer;
+  fill: #63d1bb;
+  fill-opacity: 1.0;
+}
+.main-nav__icon-search:active,
+.main-nav__icon-cart:active,
+.main-nav__cart:active .main-nav__icon-cart {
+  fill-opacity: 0.3;
 }
 .main-nav__icon-search {
   top: 4px;
@@ -209,6 +191,8 @@
 }
 @media (min-width: 768px) {
   .main-nav {
+    position: relative;
+    z-index: 100;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -217,6 +201,7 @@
   .main-nav__wrapper {
     padding-left: 8px;
     padding-right: 10px;
+    padding-bottom: 10px;
     -ms-flex-order: -2;
         order: -2;
     box-sizing: border-box;
@@ -243,7 +228,8 @@
         flex-wrap: wrap;
   }
   .main-nav__user-block-item {
-    padding: 30px 0 30px 30px;
+    border-top: none;
+    padding: 31px 0 30px 30px;
     box-sizing: border-box;
   }
   .main-nav__user-block-item-search {
@@ -283,8 +269,7 @@
     padding: 0;
     box-sizing: border-box;
     border: none;
-    padding-top: 16px;
-    padding-left: 10px;
+    padding: 20px 0 2px 9px;
   }
   .main-nav__link {
     font-size: 15px;
@@ -302,8 +287,7 @@
   }
   .main-nav__special-offers-item--thickness {
     display: block;
-    padding-right: 9px;
-    padding-top: 16px;
+    padding: 19px 10px 2px 9px;
     font-size: 15px;
     line-height: 24px;
     font-weight: normal;
@@ -312,9 +296,89 @@
   }
 }
 @media (min-width: 1150px) {
-  .main-nav__items--hidden,
-  .main-nav__user-block-items--hidden {
+  .main-nav__wrapper {
+    padding: 9px 58px 0 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .main-nav__items {
+    -ms-flex-preferred-size: 405px;
+        flex-basis: 405px;
+    -ms-flex-order: -3;
+        order: -3;
+  }
+  .main-nav__item {
+    -ms-flex-preferred-size: 220px;
+        flex-basis: 220px;
+    padding: 31px 10px 33px 0;
+  }
+  .main-nav__item:nth-child(1) {
+    -ms-flex-preferred-size: 185px;
+        flex-basis: 185px;
+    border-right: 1px solid #ececec;
+  }
+  .main-nav__item:nth-child(2) {
+    padding-left: 34px;
+  }
+  .main-nav__link {
+    text-indent: 5px;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #000;
+    font-family: 'Open Sans';
+  }
+  .main-nav__user-block-item {
+    padding: 31px 0 29px 28px;
+  }
+  .main-nav__user-block-items {
+    -ms-flex-preferred-size: 350px;
+        flex-basis: 350px;
+  }
+  .main-nav__user-block-item-search {
+    -ms-flex-preferred-size: 85px;
+        flex-basis: 85px;
+  }
+  .main-nav__user-block-item-cart {
+    padding-left: 30px;
+    -ms-flex-preferred-size: 265px;
+        flex-basis: 265px;
+  }
+  .main-nav__special-offers-items {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .main-nav__special-offers-item {
+    padding: 21px 10px 11px;
     display: block;
+    -ms-flex-preferred-size: 175px;
+        flex-basis: 175px;
+    box-sizing: border-box;
+  }
+  .main-nav__special-offers-item:nth-child(1) {
+    padding-left: 0;
+  }
+  .main-nav__special-offers-item:nth-child(2) {
+    padding-left: 44px;
+  }
+  .main-nav__special-offers-item--thickness {
+    padding: 21px 0 11px;
+    -ms-flex-preferred-size: 235px;
+        flex-basis: 235px;
+    margin-left: auto;
+    margin-right: -4px;
+  }
+  .main-nav__link-special-offers {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #000;
+    font-family: 'Open Sans';
   }
 }
 .page-main {
@@ -341,6 +405,7 @@
 }
 @media (min-width: 768px) {
   .page-main {
+    margin-top: -45px;
     position: relative;
     width: 768px;
     margin-bottom: 56px;
@@ -406,10 +471,12 @@
 }
 @media (min-width: 1150px) {
   .page-main {
+    margin-top: -55px;
     width: 1250px;
     margin-bottom: 106px;
   }
   .page-main__wrapper {
+    border-top: 1px solid #e7e7e7;
     padding: 19px 100px 10px;
     background: #fafafa url('../../img/hero-desktop@1x.jpg') 50% 0 no-repeat;
     margin-bottom: 52px;
