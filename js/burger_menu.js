@@ -2,13 +2,10 @@
 (function(){
 	var mainNav = document.querySelector('.main-nav');
 	var iconMenu = mainNav.querySelector('.main-nav__toggle');
-	var burgerMenuItems = mainNav.querySelector('.main-nav__items');
-	var burgerMenuUserBlockItems = mainNav.querySelector('.main-nav__user-block-items');
-	var burgerMenuItemsClose = 'main-nav__items--hidden';
-	var burgerMenuUserBlockItemsClose ='main-nav__user-block-items--hidden';
+	var burgerMenuWrapper = mainNav.querySelector('.main-nav__menu-wrapper');
 	if (iconMenu.classList.contains('main-nav__toggle--open')) {
-		burgerMenuItems.classList.add(burgerMenuItemsClose);
-		burgerMenuUserBlockItems.classList.add(burgerMenuUserBlockItemsClose);
+		burgerMenuWrapper.classList.remove('main-nav__menu-wrapper');
+		burgerMenuWrapper.classList.add('main-nav__menu-wrapper--close');
 		iconMenu.classList.remove('main-nav__toggle--open');
 		iconMenu.classList.add('main-nav__toggle--close');
 	}
@@ -16,8 +13,7 @@
 		if(evt.keyCode == window.util.ESC_KEYCODE) {
 			iconMenu.classList.remove('main-nav__toggle--open');
 			iconMenu.classList.add('main-nav__toggle--close');
-			window.util.closePopUp(burgerMenuItems, burgerMenuItemsClose);
-			window.util.closePopUp(burgerMenuUserBlockItems, burgerMenuUserBlockItemsClose);
+			window.util.addModClose(burgerMenuWrapper);
 			document.removeEventListener('keydown', closeMenuEsc);
 		}
 	};
@@ -26,14 +22,12 @@
 		if (iconMenu.classList.contains('main-nav__toggle--open')) {
 			iconMenu.classList.remove('main-nav__toggle--open');
 			iconMenu.classList.add('main-nav__toggle--close');
-			window.util.closePopUp(burgerMenuItems, burgerMenuItemsClose);
-			window.util.closePopUp(burgerMenuUserBlockItems, burgerMenuUserBlockItemsClose);
+			window.util.addModClose(burgerMenuWrapper);
 		}
 		else if (iconMenu.classList.contains('main-nav__toggle--close')) {
 			iconMenu.classList.remove('main-nav__toggle--close');
 			iconMenu.classList.add('main-nav__toggle--open');
-			window.util.showPopUp(burgerMenuItems, burgerMenuItemsClose);
-			window.util.showPopUp(burgerMenuUserBlockItems, burgerMenuUserBlockItemsClose);
+			window.util.addModOpen(burgerMenuWrapper);
 		}
 	};
 	iconMenu.addEventListener('click', toggle);
