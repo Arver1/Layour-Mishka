@@ -3,6 +3,10 @@
 	width: 320px;
 	margin: 0 auto 30px;
 	border-top: 1px solid #ececec;
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+	}
 	&__title {
 		margin: 0;
 		padding: 70px 30px 0;
@@ -11,18 +15,21 @@
 		.font(27px;30px);
 		background: #fafafa url('../../img/hero-mobile@1x.jpg') 50% 21% no-repeat;
 	}
-	&__special-offers-list {
+	&__special-offers-items {
 		display: none;
 		list-style: none;
+		margin: 0;
+		padding: 0;
 	}
 	@media @tablet_width {
+		margin-top: -44px;
 		position: relative;
 		width: 768px;
 		margin-bottom: 56px;
 		&__wrapper {
 			position: relative;
 			background: #fafafa url('../../img/hero-desktop@1x.jpg') 50% 0% no-repeat;
-			padding: 153px 50px 0;
+			padding: 17px 50px 0;
 			min-height: 404px;
 			display: flex;
 			flex-wrap: wrap;
@@ -43,8 +50,22 @@
 			flex-grow: 1;
 			.font(43px;50px);
 			background: none;
-			padding: 0 0 373px;
+			padding: 110px 0 373px;
 			min-height: 0;
+		}
+		&__special-offers-items {
+			order: -1;
+			display: block;
+			margin-left: auto;
+		}
+		&__special-offers-item {
+			display: none;
+		}
+		&__special-offers-item--thickness {
+			display: block;
+			text-align: right;
+			padding: 0px 0px 2px 9px;
+			.font(15px;24px;normal;#444);
 		}
 		&__special-offers-list {
 			margin: 0;
@@ -65,8 +86,10 @@
 		}
 	}
 	@media @desktop_width {
+		border: none;
+		margin-top: 0;
 		width: 1250px;
-		margin-bottom: 106px;
+		margin-bottom: 50px;
 		&__wrapper {
 			padding: 19px 100px 10px;
 			background: #fafafa url('../../img/hero-desktop@1x.jpg') 50% 0 no-repeat;
@@ -75,7 +98,7 @@
 		&__title {
 			.font(53px;57px);
 			flex-basis: 100%;
-			padding: 62px 0 360px;
+			padding: 100px 0 360px;
 		}
 		&__special-offers-list {
 			order: -1;
@@ -104,6 +127,32 @@
 			background-repeat: repeat-x;
 			background-size: auto 34px;
 			height: 34px;
+		}
+		&__special-offers-items {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0;
+			flex-basis: 100%;
+		}
+		&__special-offers-item {
+			padding: 0 10px 11px;
+			display: block;
+			flex-basis: 175px;
+			box-sizing: border-box;
+		}
+		&__special-offers-item:nth-child(1) {
+			padding-left: 0;
+		}
+		&__special-offers-item:nth-child(2) {
+			padding-left: 44px;
+		}
+		&__special-offers-item--thickness {
+			padding: 0 0 11px;
+			flex-basis: 235px;
+			margin-left: auto;
+		}
+		&__link-special-offers {
+			.font();
 		}
 	}
 }

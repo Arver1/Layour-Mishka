@@ -113,18 +113,33 @@
 		}
 	}
 	@media @desktop_width {
-		width: 1250px;
-		padding: 0 100px 0 100px;
-		box-sizing: border-box;
-		min-height: 490px;
+		width: 1050px;
+		padding: 32px 100px 0;
 		position: relative;
+		&::after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		&__text-wrapper {
+			float: left;
+			width: 525px;
+			box-sizing: border-box;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		&__wrapper {
+			width: 525px;
+			float: right;
+			box-sizing: border-box;
+		}
 		&__details {
 			width: 525px;
 			margin: 0;
 			margin-bottom: 79px;
 			& caption {
 				.font(53px;57px);
-				padding: 104px 0 17px;
+				padding: 72px 0 17px;
 				text-align: right;
 				margin-left: 62px;
 				margin-right: 83px;
@@ -134,13 +149,7 @@
 			display: block;
 			position: absolute;
 			bottom: 0;
-			left: 0;
-		}
-		&__wrapper {
-			width: 525px;
-			position: absolute;
-			top: 34px;
-			right: 100px;
+			left: 2px;
 		}
 		&__details-tr-email {
 			position: static;

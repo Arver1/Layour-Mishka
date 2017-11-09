@@ -4,6 +4,6 @@
 	var goodsOrderWrapper = document.querySelector('.goods__order-wrapper');
 	btnOrder.addEventListener('click', function(evt) {
 		evt.preventDefault();
-		window.util.showPopUp(goodsOrderWrapper);
+		window.util.showPopUp(goodsOrderWrapper,'visually-hidden');
 });
 })();
