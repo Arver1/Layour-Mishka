@@ -1,37 +1,32 @@
 'use strict';
 (function(){
 	var mainNav = document.querySelector('.main-nav');
-	var iconMenu = mainNav.querySelector('.main-nav__toggle');
-	var burgerMenuWrapper = mainNav.querySelector('.main-nav__menu-wrapper');
-	if (iconMenu.classList.contains('main-nav__toggle--open')) {
-		burgerMenuWrapper.classList.remove('main-nav__menu-wrapper');
-		burgerMenuWrapper.classList.add('main-nav__menu-wrapper--close');
-		iconMenu.classList.remove('main-nav__toggle--open');
-		iconMenu.classList.add('main-nav__toggle--close');
-	}
+	var burgerMenu = mainNav.querySelector('.main-nav__toggle');
+	var burgerMenuList = mainNav.querySelector('.main-nav__list');
+	var userBlockList = mainNav.querySelector('.user-block-list');
 	function closeMenuEsc(evt) {
 		if(evt.keyCode == window.util.ESC_KEYCODE) {
-			iconMenu.classList.remove('main-nav__toggle--open');
-			iconMenu.classList.add('main-nav__toggle--close');
-			window.util.addModClose(burgerMenuWrapper);
+			burgerMenu.classList.remove('main-nav__toggle-open');
+			burgerMenu.classList.add('main-nav__toggle');
+			window.util.closePopUp(burgerMenuList);
 			document.removeEventListener('keydown', closeMenuEsc);
 		}
 	};
 	function toggle(){
 		document.addEventListener('keydown', closeMenuEsc);
-		if (iconMenu.classList.contains('main-nav__toggle--open')) {
-			iconMenu.classList.remove('main-nav__toggle--open');
-			iconMenu.classList.add('main-nav__toggle--close');
-			window.util.addModClose(burgerMenuWrapper);
+		if (burgerMenu.classList.contains('main-nav__toggle-open')) {
+			burgerMenu.classList.remove('main-nav__toggle-open');
+			burgerMenu.classList.add('main-nav__toggle');
+			burgerMenu.classList.add('main-nav__toggle-hide');
 		}
-		else if (iconMenu.classList.contains('main-nav__toggle--close')) {
-			iconMenu.classList.remove('main-nav__toggle--close');
-			iconMenu.classList.add('main-nav__toggle--open');
-			window.util.addModOpen(burgerMenuWrapper);
+		else if (burgerMenu.classList.contains('main-nav__toggle')) {
+			burgerMenu.classList.remove('main-nav__toggle');
+			burgerMenu.classList.remove('main-nav__toggle-hide');
+			burgerMenu.classList.add('main-nav__toggle-open');
 		}
 	};
-	iconMenu.addEventListener('click', toggle);
-	iconMenu.addEventListener('keydown', function(evt) {
+	burgerMenu.addEventListener('click', toggle);
+	burgerMenu.addEventListener('keydown', function(evt) {
 		if(evt.keyCode == window.util.ENTER_KEYCODE) {
 			toggle();
 		}
