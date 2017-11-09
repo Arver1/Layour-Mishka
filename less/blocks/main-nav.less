@@ -161,12 +161,15 @@
 			top: 22px;
 			left: -11px;
 		}
+		&__link-logo {
+			position: relative;
+			z-index: 30;
+		}
 		&__menu-wrapper,
 		&__menu-wrapper--open,
 		&__menu-wrapper--close {
 			width: 358px;
 			position: static;
-			z-index: 20;
 			display: flex;
 			flex-wrap: wrap;
 			background-color: transparent;
@@ -279,34 +282,4 @@
 			flex-basis: 265px;
 		}
 	}
-	/*
-		&__special-offers-items {
-			display: flex;
-			flex-wrap: wrap;
-			margin: 0;
-			flex-basis: 100%;
-		}
-		&__special-offers-item {
-			padding: 21px 10px 11px;
-			display: block;
-			flex-basis: 175px;
-			box-sizing: border-box;
-		}
-		&__special-offers-item:nth-child(1) {
-			padding-left: 0;
-		}
-		&__special-offers-item:nth-child(2) {
-			padding-left: 44px;
-		}
-		&__special-offers-item--thickness {
-			padding: 21px 0 11px;
-			flex-basis: 235px;
-			margin-left: auto;
-			margin-right: -4px;
-		}
-		&__link-special-offers {
-			.font();
-		}
-	}
-	*/
 }
