@@ -133,6 +133,30 @@
 		background-color: #63d1bb;
 		margin-bottom: 20px;
 	}
+	&-buy {
+		font-size: 0;
+		flex-basis: 98px;
+		padding-top: 2px;
+		box-sizing: border-box;
+		border: none;
+		position: relative;
+		&__icon-cart {
+			position: absolute;
+			right: -2px;
+			fill-opacity: 0.2;
+		}
+		&__icon-cart:hover {
+			fill: #63d1bb;
+			fill-opacity: 1.0;
+		}
+		&__icon-cart:active {
+			fill-opacity: 0.3;
+		}
+	}
+	&-catalog-order {
+		flex-basis: 192px;
+		margin: 0 33px 32px auto;
+	}
 	@media @tablet_width {
 		&-breadcrumbs {
 			flex-basis: 334px;

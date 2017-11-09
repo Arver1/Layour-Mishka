@@ -1,0 +1,43 @@
+.video-of-production {
+	width: 260px;
+	box-sizing: border-box;
+	margin: 0 30px;
+	border: 1px solid #ececec;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 58px;
+	&__title {
+		.font(17px);
+		margin: 0;
+		flex-basis: 169px;
+		box-sizing: border-box;
+		padding: 23px 0px 24px 89px;
+		border-bottom: none;
+		position: relative;
+	}
+	&__icon-video {
+		position: absolute;
+		top: 29px;
+		left: 33px;
+		fill: #63d1bb;
+	}
+	&__description {
+		margin: 0;
+		padding: 28px 33px 24px;
+		.font(13px;24px;normal;#444);
+	}
+	&__icon-play-video {
+		position: absolute;
+		z-index: 200;
+	}
+	& video {
+		margin-left: -1px;
+	}
+	& video:hover {
+		cursor: pointer;
+		box-shadow: 0 6px 10px rgba(0,0,0, 0.1);
+	}
+	& video:active {
+		box-shadow: 0 3px 5px rgba(0,0,0, 0.1);
+	}
+}
