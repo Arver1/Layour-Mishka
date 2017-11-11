@@ -1,7 +1,11 @@
 .catalog-main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	width: 320px;
 	margin: 0 auto;
 	&__title {
+		flex-basis: 100%;
 		.font(27px;30px);
 		background-color: #f1f1f1;
 		padding: 71px 0 76px;
@@ -14,8 +18,9 @@
 		width: 768px;
 		margin-top: -44px;
 		&__title {
+			border: none;
 			.font(43px;50px);
-			padding: 94px 0;
+			padding: 52px 0 92px;
 			position: relative;
 			margin-bottom: 66px;
 		}
@@ -29,6 +34,20 @@
 			left: 0;
 			background: url('../../img/bg-zigzag-fill.svg') no-repeat;
 			background-size: auto 24px;
+		}
+	}
+	@media @desktop_width {
+		width: 1150px;
+		margin-top: 0px;
+		&__title {
+			.font(53px;57px);
+			padding: 40px 0 120px;
+			margin-bottom: 110px;
+		}
+		&__title::after {
+			background-repeat: repeat-x;
+			background-size: auto 34px;
+			height: 34px;
 		}
 	}
 }
