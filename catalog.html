@@ -151,50 +151,72 @@
 			<div class="catalog-product__wrapper-description">
 				<h3 class="catalog-product__title">Зайчик-попрыгайчик</h3>
 				<p class="catalog-product__feature">Рост 30 см, вес 200 г</p>
-				<b class="catalog-product__price">1 200 руб.</b>
-				<a class="btn btn-buy" href="#">В корзину
-					<svg class="btn-buy__icon-cart" width="20" height="19">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon_cart"></use>
-					</svg>
-				</a>
+				<div class="catalog-product__wrapper-price">
+					<b class="catalog-product__price">1 200 руб.</b>
+					<a class="btn btn-buy" href="#">В корзину
+						<svg class="btn-buy__icon-cart" width="20" height="19">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon_cart"></use>
+						</svg>
+					</a>
+				</div>
 			</div>
-			<img src="../../img/photo-1-mobile@1x.jpg" alt="Зайчик-попрыгайчик" title="Зайчик-попрыгайчик" width="260" height="195">
+			<div class="catalog-product__wrapper-img">
+				<picture>
+					<source media="(min-width: 768px)" srcset="../../img/photo-1-tablet@1x.jpg"/>
+					<img src="../../img/photo-1-mobile@1x.jpg" alt="Зайчик-попрыгайчик" title="Зайчик-попрыгайчик">
+				</picture>
+			</div>
 		</article>
 		<article class="catalog-product">
 			<div class="catalog-product__wrapper-description">
 				<h3 class="catalog-product__title">Корзинка для белья</h3>
 				<p class="catalog-product__feature">Диаметр 15 см, высота 10 см</p>
-				<b class="catalog-product__price">690 руб.</b>
-				<a class="btn btn-buy" href="#">В корзину
-					<svg class="btn-buy__icon-cart" width="20" height="19">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon_cart"></use>
-					</svg>
-				</a>
+				<div class="catalog-product__wrapper-price">
+					<b class="catalog-product__price">690 руб.</b>
+					<a class="btn btn-buy" href="#">В корзину
+						<svg class="btn-buy__icon-cart" width="20" height="19">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon_cart"></use>
+						</svg>
+					</a>
+				</div>
 			</div>
-			<img src="../../img/photo-2-mobile@1x.jpg" alt="Корзинка для белья" title="Корзинка для белья" width="260" height="195">
+			<div class="catalog-product__wrapper-img">
+				<picture>
+					<source media="(min-width: 768px)" srcset="../../img/photo-2-tablet@1x.jpg"/>
+					<img src="../../img/photo-2-mobile@1x.jpg" alt="Корзинка для белья" title="Корзинка для белья">
+				</picture>
+			</div>
 		</article>
 		<article class="catalog-product">
 			<div class="catalog-product__wrapper-description">
 				<h3 class="catalog-product__title">Большая корзинка для игрушек</h3>
 				<p class="catalog-product__feature">Диаметр 30 см, высота 30 см</p>
-				<b class="catalog-product__price">1 500 руб.</b>
-				<a class="btn btn-buy" href="#">В корзину
-					<svg class="btn-buy__icon-cart" width="20" height="19">
-						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon_cart"></use>
-					</svg>
-				</a>
+				<div class="catalog-product__wrapper-price">
+					<b class="catalog-product__price">1 500 руб.</b>
+					<a class="btn btn-buy" href="#">В корзину
+						<svg class="btn-buy__icon-cart" width="20" height="19">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon_cart"></use>
+						</svg>
+					</a>
+				</div>
 			</div>
-			<img src="../../img/photo-3-mobile@1x.jpg" alt="Большая корзинка для игрушек" title="Большая корзинка для игрушек" width="260" height="195">
+			<div class="catalog-product__wrapper-img">
+				<picture>
+					<source media="(min-width: 768px)" srcset="../../img/photo-3-tablet@1x.jpg"/>
+					<img src="../../img/photo-3-mobile@1x.jpg" alt="Большая корзинка для игрушек" title="Большая корзинка для игрушек">
+				</picture>
+			</div>
 		</article>
 		<section class="video-of-production">
-			<h3 class="video-of-production__title">Процесс<br> производства
+			<h3 class="video-of-production__title">Процесс производства
 				<svg class="video-of-production__icon-video" width="32" height="32">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon_video"></use>
 				</svg>
 			</h3>
 			<div class="video-of-production__video-wrapper">
-				<video poster="../../img/video-mobile@1x.jpg" width="100%" height="149">
+				<video src="#">
 				</video>
+				<div class="video-of-production__poster"></div>
 				<a class="btn btn-play"></a>
 			</div>
 			<p class="video-of-production__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
@@ -232,5 +254,6 @@
 	<script src="js/util.js"></script>
 	<script src="js/burger_menu.js"></script>
 	<script src="js/index_popUp.js"></script>
+	<script src="js/catalog_video.js"></script>
 </body>
 </html>

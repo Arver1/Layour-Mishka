@@ -135,13 +135,14 @@
 	}
 	&-buy {
 		font-size: 0;
-		flex-basis: 98px;
+		flex-basis: 50%;
 		padding-top: 2px;
 		box-sizing: border-box;
 		border: none;
 		position: relative;
 		&__icon-cart {
 			position: absolute;
+			top: 0;
 			right: -2px;
 			fill-opacity: 0.2;
 		}
@@ -244,6 +245,28 @@
 			width: 350px;
 			padding: 18px 0;
 			margin: 0 6px 20px;
+		}
+		&-buy {
+			&__icon-cart {
+				top: 1px;
+				right: 5px;
+			}
+		}
+		&-play {
+			top: calc((455px - 77px) / 2);
+			left: calc((666px - 101px) / 2);
+		}
+		&-play:hover {
+			left: calc((666px - (101px * 1.2)) / 2);
+			top: calc((455px - (77px * 1.2)) / 2);
+		}
+		&-play:active {
+			left: calc((666px - (101px * 0.8)) / 2);
+			top: calc((455px - (77px * 0.8)) / 2);
+		}
+		&-catalog-order {
+			flex-basis: 582px;
+			margin: 0 auto 44px auto;
 		}
 	}
 	@media @desktop_width {
