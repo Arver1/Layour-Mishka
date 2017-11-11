@@ -15,12 +15,6 @@
 		.font(27px;30px);
 		background: #fafafa url('../../img/hero-mobile@1x.jpg') 50% 21% no-repeat;
 	}
-	&__special-offers-items {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
 	@media @tablet_width {
 		margin-top: -44px;
 		position: relative;
@@ -53,37 +47,6 @@
 			padding: 110px 0 373px;
 			min-height: 0;
 		}
-		&__special-offers-items {
-			order: -1;
-			display: block;
-			margin-left: auto;
-		}
-		&__special-offers-item {
-			display: none;
-		}
-		&__special-offers-item--thickness {
-			display: block;
-			text-align: right;
-			padding: 0px 0px 2px 9px;
-			.font(15px;24px;normal;#444);
-		}
-		&__special-offers-list {
-			margin: 0;
-			padding: 0;
-			display: flex;
-			justify-content: flex-end;
-			box-sizing: border-box;
-			width: 668px;
-			position: absolute;
-			top: 17px;
-			&__item {
-				display: none;
-				.font(15px;24px;normal;#444444);
-			}
-			&__item--thickness {
-				.inline_block();
-			}
-		}
 	}
 	@media @desktop_width {
 		border: none;
@@ -99,19 +62,6 @@
 			.font(53px;57px);
 			flex-basis: 100%;
 			padding: 100px 0 360px;
-		}
-		&__special-offers-list {
-			order: -1;
-			flex-basis: 100%;
-			position: static;
-			margin-bottom: 50px;
-			&__item {
-				.inline_block();
-			}
-			&__item:nth-of-type(2) {
-				margin-left: 62px;
-				margin-right: auto;
-			}
 		}
 		&__link {
 			.font();

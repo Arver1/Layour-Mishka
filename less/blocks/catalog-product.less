@@ -1,0 +1,112 @@
+.catalog-product {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 30px 30px;
+	flex-basis: 100%;
+	&:hover {
+		cursor: pointer;
+		box-shadow: 0 6px 10px rgba(0,0,0, 0.1);
+	}
+	&:active {
+		box-shadow: 0 3px 5px rgba(0,0,0, 0.1);
+	}
+	&__wrapper-img {
+		order: -1;
+	}
+	&__wrapper-img img {
+		vertical-align: top;
+	}
+	&__wrapper-description {
+		border: 1px solid #ededed;
+		padding: 27px 28px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	&__title {
+		flex-basis: 100%;
+		margin: 0;
+		padding: 0;
+		.font(17px);
+		margin-bottom: 5px;
+	}
+	&__title:hover {
+		cursor: pointer;
+		color: rgba(0,0,0, 0.6);
+	}
+	&__title:active {
+		cursor: pointer;
+		color: rgba(0,0,0, 0.3);
+	}
+	&__feature {
+		flex-basis: 100%;
+		margin: 0;
+		padding-bottom: 19px;
+		width: 100%;
+		.font(13px;30px;normal;#444);
+	}
+	&__wrapper-price {
+		flex-basis: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		border-top: 1px solid #ececec;
+		padding-top: 20px;
+	}
+	&__price {
+		flex-basis: 50%;
+		.font();
+	}
+	@media @tablet_width {
+		margin: 0 50px 54px;
+		&__wrapper-description {
+			border: 1px solid #ededed;
+			box-sizing: border-box;
+			padding: 0 26px;
+			width: 50%;
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+		&__title {
+			padding-top: 24px;
+			.font(20px;24px;);
+			margin-bottom: 7px;
+			width: 100%;
+			flex-basis: auto;
+		}
+		&__feature {
+			width: 100%;
+			flex-basis: auto;
+			.font(15px;30px;normal;#444);
+			margin-bottom: auto;
+		}
+		&__wrapper-price {
+			width: 100%;
+			flex-basis: auto;
+			padding: 22px 0 26px;
+			align-content: flex-end;
+		}
+		&__price {
+			box-sizing: border-box;
+			.font(17px);
+			padding-left: 5px;
+		}
+	}
+	@media @desktop_width {
+		flex-basis: 315px;
+		margin: 0;
+		&:nth-of-type(3n+1) {
+			margin-left: 50px;
+		}
+		&:nth-of-type(3n+3) {
+			margin-right: 50px;
+		}
+		&__wrapper-description {
+			border: 1px solid #ededed;
+			box-sizing: border-box;
+			padding: 0 26px;
+			width: 315px;
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+	}
+}

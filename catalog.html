@@ -102,12 +102,17 @@
 				<path d="M24.108,6.7c0.521-0.05,1.045-0.226,1.477-0.524c0.085-0.072,0.171-0.144,0.256-0.216c0.52-0.335,0.972-0.827,0.728-1.361 c-0.504-1.105-0.423-2.231-0.416-3.414c0.006-0.958-0.963-1.246-1.781-1.174c-0.723,0.063-2.168,0.581-2.175,1.52 c-0.006,0.993-0.071,2.016,0.109,2.992c-0.047,0.113-0.074,0.239-0.104,0.355c-0.055,0.212,0.016,0.42,0.142,0.59 c0,0.045,0.002,0.089,0.002,0.134c0.005,0.112,0.01,0.224,0.015,0.335c0.073,0.232,0.216,0.409,0.429,0.53 C23.178,6.7,23.668,6.742,24.108,6.7z"/>
 			</g>
 		</symbol>
+		<symbol id="icon_video" viewBox="0 0 32 32">
+			<g transform="translate(0 192)">
+				<path d="M26-177l6-4v16l-6-4V-177z M24-177v8c0,2.209-1.791,4-4,4H4c-2.209,0-4-1.791-4-4v-8c0-2.209,1.791-4,4-4h10 c0-1.105,0.895-2,2-2v-2H5c-0.553,0-1-0.447-1-1s0.447-1,1-1h12c0.553,0,1,0.447,1,1v3c1.105,0,2,0.895,2,2 C22.209-181,24-179.209,24-177z M12-177H4v8h8V-177z M20-176c0-0.553-0.447-1-1-1h-4c-0.553,0-1,0.447-1,1s0.447,1,1,1h4 C19.553-175,20-175.447,20-176z"/>
+			</g>
+		</symbol>
 	</svg>
 	<header class="page-header">
 		<h1 class="visually-hidden">Магазин &laquo;Мишка&raquo; - изделия ручной работы для дома</h1> <!-- скрыт -->
 		<nav class="main-nav">
 			<div class="main-nav__wrapper">
-				<a class="main-nav__link-logo">
+				<a class="main-nav__link-logo" href="index.html">
 					<picture>
 						<source media="(min-width: 1150px)" srcset="img/logo-desktop.svg" />
 						<source media="(min-width: 768px)" srcset="img/logo-tablet.svg" />
@@ -142,32 +147,106 @@
 	</header>
 	<main class="catalog-main">
 		<h2 class="catalog-main__title">Каталог товаров</h2>
+		<ul class="special-offers-items">
+			<li class="special-offers-items__item"><a class="special-offers-items__link " href="#">Новые поступления</a></li>
+			<li class="special-offers-items__item"><a class="special-offers-items__link" href="#">Распродажа</a></li>
+			<li class="special-offers-items__item special-offers-items__item--thickness">Бесплатная доставка по России</li>
+		</ul>
 		<article class="catalog-product">
-			<h3 class="catalog-product__title">Зайчик-попрыгайчик</h3>
-			<img src="http://placehold.it/260x195" alt="Зайчик-попрыгайчик" title="Зайчик-попрыгайчик" width="260" height="195">
-			<span class="catalog-product__description">Рост 30см, вес 200г</span>
-			<b class="catalog-product__price">1 200 руб.</b>
-			<a class="btn btn-buy" href="#">В корзину</a>
+			<div class="catalog-product__wrapper-description">
+				<h3 class="catalog-product__title">Зайчик-попрыгайчик</h3>
+				<p class="catalog-product__feature">Рост 30 см, вес 200 г</p>
+				<div class="catalog-product__wrapper-price">
+					<b class="catalog-product__price">1 200 руб.</b>
+					<a class="btn btn-buy" href="#">В корзину
+						<svg class="btn-buy__icon-cart" width="20" height="19">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon_cart"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div class="catalog-product__wrapper-img">
+				<picture>
+					<source media="(min-width: 1150px)" srcset="../../img/photo-1-desktop@1x.jpg"/>
+					<source media="(min-width: 768px)" srcset="../../img/photo-1-tablet@1x.jpg"/>
+					<img src="../../img/photo-1-mobile@1x.jpg" alt="Зайчик-попрыгайчик" title="Зайчик-попрыгайчик">
+				</picture>
+			</div>
 		</article>
 		<article class="catalog-product">
-			<h3 class="catalog-product__title">Корзинка для белья</h3>
-			<img src="http://placehold.it/260x195" alt="Корзинка для белья" title="Корзинка для белья" width="260" height="195">
-			<span class="catalog-product__description">Диаметр 15 см, высота 10 см</span>
-			<b class="catalog-product__price">690 руб.</b>
-			<a class="btn btn-buy" href="#">В корзину</a>
+			<div class="catalog-product__wrapper-description">
+				<h3 class="catalog-product__title">Корзинка для белья</h3>
+				<p class="catalog-product__feature">Диаметр 15 см, высота 10 см</p>
+				<div class="catalog-product__wrapper-price">
+					<b class="catalog-product__price">690 руб.</b>
+					<a class="btn btn-buy" href="#">В корзину
+						<svg class="btn-buy__icon-cart" width="20" height="19">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon_cart"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div class="catalog-product__wrapper-img">
+				<picture>
+					<source media="(min-width: 1150px)" srcset="../../img/photo-2-desktop@1x.jpg"/>
+					<source media="(min-width: 768px)" srcset="../../img/photo-2-tablet@1x.jpg"/>
+					<img src="../../img/photo-2-mobile@1x.jpg" alt="Корзинка для белья" title="Корзинка для белья">
+				</picture>
+			</div>
 		</article>
 		<article class="catalog-product">
-			<h3 class="catalog-product__title">Большая корзинка для игрушек</h3>
-			<img src="http://placehold.it/260x195" alt="Большая корзинка для игрушек" title="Большая корзинка для игрушек" width="260" height="195">
-			<span class="catalog-product__description">Диаметр 30 см, высота 30 см</span>
-			<b class="catalog-product__price">1 500 руб.</b>
-			<a class="btn btn-buy" href="#">В корзину</a>
+			<div class="catalog-product__wrapper-description">
+				<h3 class="catalog-product__title">Большая корзинка для игрушек</h3>
+				<p class="catalog-product__feature">Диаметр 30 см, высота 30 см</p>
+				<div class="catalog-product__wrapper-price">
+					<b class="catalog-product__price">1 500 руб.</b>
+					<a class="btn btn-buy" href="#">В корзину
+						<svg class="btn-buy__icon-cart" width="20" height="19">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon_cart"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div class="catalog-product__wrapper-img">
+				<picture>
+					<source media="(min-width: 1150px)" srcset="../../img/photo-3-desktop@1x.jpg"/>
+					<source media="(min-width: 768px)" srcset="../../img/photo-3-tablet@1x.jpg"/>
+					<img src="../../img/photo-3-mobile@1x.jpg" alt="Большая корзинка для игрушек" title="Большая корзинка для игрушек">
+				</picture>
+			</div>
 		</article>
 		<section class="video-of-production">
-			<h3 class="video-of-production__title">Процесс производства</h3>
-			<video poster="http://placehold.it/260x150" width="260" height="150"></video>
-			<a class="btn btn-order">Сделать заказ</a>
+			<h3 class="video-of-production__title">Процесс производства
+				<svg class="video-of-production__icon-video" width="32" height="32">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon_video"></use>
+				</svg>
+			</h3>
+			<div class="video-of-production__video-wrapper">
+				<video src="#">
+				</video>
+				<div class="video-of-production__poster"></div>
+				<a class="btn btn-play"></a>
+			</div>
+			<p class="video-of-production__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+			<a class="btn btn-order btn-catalog-order">Сделать заказ</a>
 		</section>
+		<div class="mask-popup visually-hidden">
+			<section class="goods-order">
+				<h6 class="goods-order__title">Добавить в корзину</h6>
+				<form action="#" method="get">
+					<fieldset class="goods-order__form-fieldset">
+						<legend>Выберите размер:</legend>
+						<input id="size_s"type="radio" name="size" value="s" checked>
+						<label class="label-size" for="size_s">S</label>
+						<input id="size_m" type="radio" name="size" value="m">
+						<label class="label-size"for="size_m">M</label>
+						<input id="size_l" type="radio" name="size" value="l">
+						<label class="label-size"for="size_l">L</label>
+					</fieldset>
+					<input class="btn btn-order-submit" type="submit" value="Добавить">
+				</form>
+			</section>
+		</div>
 	</main>
 	<footer class="page-footer">
 		<svg class="page-footer__footer-logo" width="102" height="34">
@@ -183,26 +262,6 @@
 	<script src="js/util.js"></script>
 	<script src="js/burger_menu.js"></script>
 	<script src="js/index_popUp.js"></script>
-	<script src="https://api-maps.yandex.ru/2.0/?load=package.standard&mode=debug&lang=ru-RU" type="text/javascript"></script>
-	<script>
-		var mapWrapper = document.querySelector('.map__yandex-wrapper');
-		mapWrapper.style.width = "100%"
-		mapWrapper.style.height = "100%"
-		mapWrapper.setAttribute('id','YMapsID');
-		ymaps.ready(init);
-		var myMap, myPlacemark;
-		function init() { 
-			myMap = new ymaps.Map ("YMapsID", {
-				center: [59.938631, 30.323055],
-				zoom: 17});
-			myPlacemark = new ymaps.Placemark ([59.93863106, 30.32305450], {}, {
-				iconImageHref: 'img/icon-map-pin.svg',
-				iconImageSize: [66, 101],
-				iconImageOffset: [-35, -95]
-			});
-			myMap.geoObjects.add(myPlacemark);
-			myMap.controls.add('zoomControl');
-		}
-	</script>
+	<script src="js/catalog_video.js"></script>
 </body>
 </html>
