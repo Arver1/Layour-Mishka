@@ -58,7 +58,7 @@
 			margin-bottom: 14px;
 		}
 		&__poster {
-			background: url('../../img/video-tablet@1x.jpg') no-repeat;
+			background: red url('../../img/video-tablet@1x.jpg') no-repeat;
 		}
 		&__title {
 			.font(20px);
@@ -80,9 +80,36 @@
 		}
 	}
 	@media @desktop_width {
+		margin-bottom: 103px;
 		width: 1150px;
+		display: block;
+		min-height: 457px;
+		&::after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		&__title {
+			float: right;
+			margin: 41px 58px 33px;
+			width: 230px;
+			padding: 54px 0 0 0;
+		}
+		&__icon-video {
+			top: 0;
+			left: 0;
+		}
+		&__description {
+			float: right;
+			width: 230px;
+			margin: 0 58px 46px;
+			padding: 0px 0px 0px;
+			.font(15px;30px;normal;#444);
+		}
 		&__video-wrapper {
 			width: 682px;
+			float: left;
+			margin-bottom: 0px;
 		}
 		&__poster {
 			background: url('../../img/video-desktop@1x.jpg') no-repeat;

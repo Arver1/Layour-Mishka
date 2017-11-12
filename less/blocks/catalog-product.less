@@ -83,7 +83,6 @@
 			width: 100%;
 			flex-basis: auto;
 			padding: 22px 0 26px;
-			align-content: flex-end;
 		}
 		&__price {
 			box-sizing: border-box;
@@ -93,7 +92,17 @@
 	}
 	@media @desktop_width {
 		flex-basis: 315px;
-		margin: 0;
+		flex-direction: column;
+		margin: 0 0 57px;
+		&__feature {
+			padding-bottom: 14px;
+		}
+		&__title {
+			width: 230px;
+			margin-right: auto;
+			margin-bottom: 5px;
+			padding-top: 0;
+		}
 		&:nth-of-type(3n+1) {
 			margin-left: 50px;
 		}
@@ -103,10 +112,12 @@
 		&__wrapper-description {
 			border: 1px solid #ededed;
 			box-sizing: border-box;
-			padding: 0 26px;
-			width: 315px;
-			flex-direction: column;
-			justify-content: flex-start;
+			padding: 26px 26px 0;
+			width: 316px;
+			flex-grow: 1;
+		}
+		&__price {
+			padding-left: 0;
 		}
 	}
 }
