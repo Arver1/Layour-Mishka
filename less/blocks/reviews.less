@@ -69,6 +69,11 @@
 	@media @tablet_width {
 		padding: 0;
 		background: #fff url("../../img/review@1x.jpg") no-repeat;
+		@media (min-resolution: 144dpi),
+		(min-resolution: 1.5dppx) {
+			background: #fff url("../../img/review@2x.jpg") no-repeat;
+			background-size: 350px 457px;
+		}
 		display: flex;
 		flex-wrap: wrap;
 		padding-top: 79px;
@@ -123,6 +128,11 @@
 		width: 1050px;
 		padding: 70px 100px 136px;
 		background: #fff url("../../img/review@1x.jpg") 100px 0 no-repeat;
+		@media (min-resolution: 144dpi),
+		(min-resolution: 1.5dppx) {
+			background: #fff url("../../img/review@2x.jpg") 100px 0 no-repeat;
+			background-size: 350px 457px;
+		}
 		&__title {
 			.font(53px;57px);
 			padding-left: 170px;
