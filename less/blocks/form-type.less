@@ -1,0 +1,52 @@
+.form-type {
+	border: none;
+	padding: 0;
+	margin-bottom: 29px;
+	&__title {
+		.font(17px;16px;bold;#63d1bb);
+		position: relative;
+		width: 260px;
+		margin: 0 30px 25px;
+		padding-right: 198px;
+		text-transform: uppercase;
+	}
+	&__title::before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 198px;
+		height: 1px;
+		background-color: #62d1bb;
+		right: 0;
+		top: 8px;
+	}
+	&__field {
+		display: none;
+	}
+	&__label {
+		.inline_block();
+		width: 260px;
+		box-sizing: border-box;
+		margin: 0 30px 15px;
+		.font(17px;18px);
+		padding: 9px 43px 0 60px;
+		position: relative;
+		cursor: pointer;
+	}
+	&__label::before {
+		content: "";
+		display: block;
+		width: 35px;
+		height: 35px;
+		border: 2px solid #444;
+		border-radius: 50%;
+		position: absolute;
+		left: -2px;
+		top: 0;
+	}
+	&__field:checked + &__label::before {
+		box-shadow:
+		inset 0 0 0 10px #fff,
+		inset 0 0 0 18px #62d1ba;
+	}
+}
