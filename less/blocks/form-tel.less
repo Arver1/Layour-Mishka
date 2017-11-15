@@ -1,0 +1,62 @@
+@keyframes scale_text {
+	to {
+		transform: scale(0);
+	}
+}
+.form-tel {
+	border: none;
+	padding: 0;
+	position: relative;
+	&__title {
+		.font(17px;16px;bold;#63d1bb);
+		position: relative;
+		width: 260px;
+		margin: 0 30px 19px;
+		padding-right: 198px;
+		text-transform: uppercase;
+	}
+	&__title::before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 198px;
+		height: 1px;
+		background-color: #62d1bb;
+		right: 0;
+		top: 8px;
+	}
+	&__field {
+		.inline_block();
+		width: 260px;
+		margin: 0 29px 14px;
+		border: none;
+		border-bottom: 2px solid #000;
+		outline: none;
+		padding-bottom: 19px;
+	}
+	&__field:focus + label::before {
+		animation-name: scale_text;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+	}
+	&__label {
+		font-size: 0;
+		position: relative;
+	}
+	&__label::before {
+		content: "+7 ХХХ ХХ ХХ*";
+		display: block;
+		width: 130px;
+		position: absolute;
+		.font(17px;18px;normal;#444);
+		top: -64px;
+		left: 27px;
+		opacity: 0.3;
+	}
+	&__icon {
+		position: absolute;
+		fill-opacity: 0.2;
+		top: 34px;
+		right: 40px;
+	}
+}

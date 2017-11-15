@@ -1,0 +1,38 @@
+@keyframes scale_text {
+	to {
+		transform: scale(0);
+	}
+}
+.form-extra {
+	border: none;
+	padding: 0;
+	margin-bottom: 10px;
+	&__title {
+		.font(17px;16px;bold;#63d1bb);
+		position: relative;
+		width: 260px;
+		margin: 0 30px 25px;
+		padding-right: 198px;
+		text-transform: uppercase;
+	}
+	&__title::before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 198px;
+		height: 1px;
+		background-color: #62d1bb;
+		right: 0;
+		top: 8px;
+	}
+	&__field {
+		outline: none;
+		border: 2px solid #444;
+		resize: none;
+		width: 260px;
+		height: 142px;
+		box-sizing: border-box;
+		margin-left: 28px;
+		padding: 17px 17px;
+	}
+}

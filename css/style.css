@@ -2512,6 +2512,7 @@ body {
 .form-initials {
   border: none;
   padding: 0;
+  margin-bottom: 13px;
 }
 .form-initials__wrapper {
   display: -ms-flexbox;
@@ -2614,4 +2615,188 @@ body {
   animation-name: scale_text;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+}
+@keyframes scale_text {
+  to {
+    transform: scale(0);
+  }
+}
+.form-tel {
+  border: none;
+  padding: 0;
+  position: relative;
+}
+.form-tel__title {
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  color: #63d1bb;
+  font-family: 'Open Sans';
+  position: relative;
+  width: 260px;
+  margin: 0 30px 19px;
+  padding-right: 198px;
+  text-transform: uppercase;
+}
+.form-tel__title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 198px;
+  height: 1px;
+  background-color: #62d1bb;
+  right: 0;
+  top: 8px;
+}
+.form-tel__field {
+  display: inline-block;
+  vertical-align: top;
+  width: 260px;
+  margin: 0 29px 14px;
+  border: none;
+  border-bottom: 2px solid #000;
+  outline: none;
+  padding-bottom: 19px;
+}
+.form-tel__field:focus + label::before {
+  animation-name: scale_text;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.form-tel__label {
+  font-size: 0;
+  position: relative;
+}
+.form-tel__label::before {
+  content: "+7 ХХХ ХХ ХХ*";
+  display: block;
+  width: 130px;
+  position: absolute;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: normal;
+  color: #444;
+  font-family: 'Open Sans';
+  top: -64px;
+  left: 27px;
+  opacity: 0.3;
+}
+.form-tel__icon {
+  position: absolute;
+  fill-opacity: 0.2;
+  top: 34px;
+  right: 40px;
+}
+@keyframes scale_text {
+  to {
+    transform: scale(0);
+  }
+}
+.form-email {
+  border: none;
+  padding: 0;
+  position: relative;
+}
+.form-email__title {
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  color: #63d1bb;
+  font-family: 'Open Sans';
+  position: relative;
+  width: 260px;
+  margin: 0 30px 19px;
+  padding-right: 198px;
+  text-transform: uppercase;
+}
+.form-email__title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 198px;
+  height: 1px;
+  background-color: #62d1bb;
+  right: 0;
+  top: 8px;
+}
+.form-email__field {
+  display: inline-block;
+  vertical-align: top;
+  width: 260px;
+  margin: 0 29px 14px;
+  border: none;
+  border-bottom: 2px solid #000;
+  outline: none;
+  padding-bottom: 19px;
+}
+.form-email__field:focus + label::before {
+  animation-name: scale_text;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.form-email__label {
+  font-size: 0;
+  position: relative;
+}
+.form-email__label::before {
+  content: "Ваш Email*";
+  display: block;
+  width: 130px;
+  position: absolute;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: normal;
+  color: #444;
+  font-family: 'Open Sans';
+  top: -64px;
+  left: 27px;
+  opacity: 0.3;
+}
+.form-email__icon {
+  position: absolute;
+  fill-opacity: 0.2;
+  top: 34px;
+  right: 36px;
+}
+@keyframes scale_text {
+  to {
+    transform: scale(0);
+  }
+}
+.form-extra {
+  border: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+.form-extra__title {
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  color: #63d1bb;
+  font-family: 'Open Sans';
+  position: relative;
+  width: 260px;
+  margin: 0 30px 25px;
+  padding-right: 198px;
+  text-transform: uppercase;
+}
+.form-extra__title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 198px;
+  height: 1px;
+  background-color: #62d1bb;
+  right: 0;
+  top: 8px;
+}
+.form-extra__field {
+  outline: none;
+  border: 2px solid #444;
+  resize: none;
+  width: 260px;
+  height: 142px;
+  box-sizing: border-box;
+  margin-left: 28px;
+  padding: 17px 17px;
 }
