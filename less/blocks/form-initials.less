@@ -81,10 +81,23 @@
 		border-bottom: 2px solid #000;
 		outline: none;
 		padding-bottom: 19px;
+		cursor: pointer;
+		color: #444;
+	}
+	&__field:hover {
+		border-color: #62d1ba;
+	}
+	&__field:focus {
+		border-width: 1px;
+		border-color: #62d1ba;
+		padding-bottom: 20px;
 	}
 	&__field:focus + label::before {
 		animation-name: scale_text;
 		animation-duration: 1s;
 		animation-fill-mode: forwards;
+	}
+	&__field-hide + &__label::before {
+		display: none;
 	}
 }

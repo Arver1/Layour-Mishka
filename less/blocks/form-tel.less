@@ -7,6 +7,7 @@
 	border: none;
 	padding: 0;
 	position: relative;
+	margin-bottom: 14px;
 	&__title {
 		.font(17px;16px;bold;#63d1bb);
 		position: relative;
@@ -19,7 +20,7 @@
 		content: "";
 		display: block;
 		position: absolute;
-		width: 198px;
+		width: 200px;
 		height: 1px;
 		background-color: #62d1bb;
 		right: 0;
@@ -28,20 +29,45 @@
 	&__field {
 		.inline_block();
 		width: 260px;
-		margin: 0 29px 14px;
+		margin: 0 29px;
 		border: none;
 		border-bottom: 2px solid #000;
 		outline: none;
 		padding-bottom: 19px;
+		cursor: pointer;
+		color: #444;
+	}
+	&__label:hover:after {
+		background-color: orange;
 	}
 	&__field:focus + label::before {
 		animation-name: scale_text;
 		animation-duration: 1s;
 		animation-fill-mode: forwards;
 	}
+	&__field:hover {
+		border-color: #62d1ba;
+	}
+	&__field:hover + &__label &__icon,
+	&__icon:hover {
+		fill: #62d1ba;
+	}
+	&__field:focus + &__label &__icon {
+		fill: #62d1ba;
+	}
+	&__field:focus {
+		padding-bottom: 20px;
+		border-width: 1px;
+		border-color: #62d1ba;
+	}
 	&__label {
-		font-size: 0;
+		.inline_block();
+		width: 260px;
+		height: 1px;
+		margin: 0 30px 14px;
 		position: relative;
+		font-size: 0;
+		cursor: pointer;
 	}
 	&__label::before {
 		content: "+7 ХХХ ХХ ХХ*";
@@ -49,14 +75,17 @@
 		width: 130px;
 		position: absolute;
 		.font(17px;18px;normal;#444);
-		top: -64px;
-		left: 27px;
+		top: -36px;
+		left: -4px;
 		opacity: 0.3;
 	}
 	&__icon {
 		position: absolute;
 		fill-opacity: 0.2;
-		top: 34px;
-		right: 40px;
+		top: -41px;
+		right: 9px;
+	}
+	&__field-hide + &__label::before {
+		display: none;
 	}
 }

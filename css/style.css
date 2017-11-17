@@ -667,12 +667,14 @@ body {
   width: 100%;
   margin-bottom: 35px;
 }
+.btn-form-submit:hover,
 .btn-order:hover,
 .btn-write-us:hover,
 .btn-write-reviews:hover {
   background-color: #444444;
   color: #ffffff;
 }
+.btn-form-submit:active,
 .btn-order:active,
 .btn-write-us:active,
 .btn-write-reviews:active {
@@ -851,6 +853,13 @@ body {
   left: calc(88.6px);
   top: calc(43.7px);
   opacity: 0.3;
+}
+.btn-form-submit {
+  outline: none;
+  background-color: transparent;
+  margin: 0 30px 10px;
+  padding: 14px 0px;
+  width: 260px;
 }
 @media (min-width: 768px) {
   .btn-breadcrumbs {
@@ -2360,7 +2369,7 @@ body {
   -ms-flex-pack: justify;
       justify-content: space-between;
   width: 320px;
-  margin: 0 auto;
+  margin: 0 auto 46px;
 }
 .form-main__title {
   -ms-flex-preferred-size: 100%;
@@ -2384,6 +2393,19 @@ body {
   color: #444;
   font-family: 'Open Sans';
   margin: 0 30px 24px;
+}
+.form-main__form {
+  width: 320px;
+}
+.form-main__notice {
+  margin: 0;
+  margin-bottom: 31px;
+  padding: 0 29px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+  color: #444;
+  font-family: 'Open Sans';
 }
 .form-type {
   border: none;
@@ -2441,6 +2463,12 @@ body {
   left: -2px;
   top: 0;
 }
+.form-type__label:hover::before {
+  border-color: #62d1ba;
+}
+.form-type__label:active::before {
+  border-color: rgba(68, 68, 68, 0.3);
+}
 .form-type__field:checked + .form-type__label::before {
   box-shadow: inset 0 0 0 10px #fff,
 		inset 0 0 0 18px #62d1ba;
@@ -2489,6 +2517,12 @@ body {
   padding: 12px 43px 0 60px;
   position: relative;
   cursor: pointer;
+}
+.form-color__label:hover::before {
+  border-color: #62d1ba;
+}
+.form-color__label:active::before {
+  border-color: rgba(68, 68, 68, 0.3);
 }
 .form-color__label::before {
   content: "";
@@ -2610,11 +2644,24 @@ body {
   border-bottom: 2px solid #000;
   outline: none;
   padding-bottom: 19px;
+  cursor: pointer;
+  color: #444;
+}
+.form-initials__field:hover {
+  border-color: #62d1ba;
+}
+.form-initials__field:focus {
+  border-width: 1px;
+  border-color: #62d1ba;
+  padding-bottom: 20px;
 }
 .form-initials__field:focus + label::before {
   animation-name: scale_text;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+}
+.form-initials__field-hide + .form-initials__label::before {
+  display: none;
 }
 @keyframes scale_text {
   to {
@@ -2625,6 +2672,7 @@ body {
   border: none;
   padding: 0;
   position: relative;
+  margin-bottom: 14px;
 }
 .form-tel__title {
   font-size: 17px;
@@ -2642,7 +2690,7 @@ body {
   content: "";
   display: block;
   position: absolute;
-  width: 198px;
+  width: 200px;
   height: 1px;
   background-color: #62d1bb;
   right: 0;
@@ -2652,20 +2700,46 @@ body {
   display: inline-block;
   vertical-align: top;
   width: 260px;
-  margin: 0 29px 14px;
+  margin: 0 29px;
   border: none;
   border-bottom: 2px solid #000;
   outline: none;
   padding-bottom: 19px;
+  cursor: pointer;
+  color: #444;
+}
+.form-tel__label:hover:after {
+  background-color: orange;
 }
 .form-tel__field:focus + label::before {
   animation-name: scale_text;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
+.form-tel__field:hover {
+  border-color: #62d1ba;
+}
+.form-tel__field:hover + .form-tel__label .form-tel__icon,
+.form-tel__icon:hover {
+  fill: #62d1ba;
+}
+.form-tel__field:focus + .form-tel__label .form-tel__icon {
+  fill: #62d1ba;
+}
+.form-tel__field:focus {
+  padding-bottom: 20px;
+  border-width: 1px;
+  border-color: #62d1ba;
+}
 .form-tel__label {
-  font-size: 0;
+  display: inline-block;
+  vertical-align: top;
+  width: 260px;
+  height: 1px;
+  margin: 0 30px 14px;
   position: relative;
+  font-size: 0;
+  cursor: pointer;
 }
 .form-tel__label::before {
   content: "+7 ХХХ ХХ ХХ*";
@@ -2677,15 +2751,18 @@ body {
   font-weight: normal;
   color: #444;
   font-family: 'Open Sans';
-  top: -64px;
-  left: 27px;
+  top: -36px;
+  left: -4px;
   opacity: 0.3;
 }
 .form-tel__icon {
   position: absolute;
   fill-opacity: 0.2;
-  top: 34px;
-  right: 40px;
+  top: -41px;
+  right: 9px;
+}
+.form-tel__field-hide + .form-tel__label::before {
+  display: none;
 }
 @keyframes scale_text {
   to {
@@ -2696,6 +2773,7 @@ body {
   border: none;
   padding: 0;
   position: relative;
+  margin-bottom: 14px;
 }
 .form-email__title {
   font-size: 17px;
@@ -2713,7 +2791,7 @@ body {
   content: "";
   display: block;
   position: absolute;
-  width: 198px;
+  width: 182px;
   height: 1px;
   background-color: #62d1bb;
   right: 0;
@@ -2723,20 +2801,43 @@ body {
   display: inline-block;
   vertical-align: top;
   width: 260px;
-  margin: 0 29px 14px;
+  margin: 0 29px;
   border: none;
   border-bottom: 2px solid #000;
   outline: none;
   padding-bottom: 19px;
+  cursor: pointer;
+  color: #444;
 }
 .form-email__field:focus + label::before {
   animation-name: scale_text;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
+.form-email__field:hover {
+  border-color: #62d1ba;
+}
+.form-email__field:hover + .form-email__label .form-email__icon,
+.form-email__icon:hover {
+  fill: #62d1ba;
+}
+.form-email__field:focus + .form-email__label .form-email__icon {
+  fill: #62d1ba;
+}
+.form-email__field:focus {
+  padding-bottom: 20px;
+  border-width: 1px;
+  border-color: #62d1ba;
+}
 .form-email__label {
-  font-size: 0;
+  display: inline-block;
+  vertical-align: top;
+  width: 260px;
+  height: 1px;
+  margin: 0 30px 14px;
   position: relative;
+  font-size: 0;
+  cursor: pointer;
 }
 .form-email__label::before {
   content: "Ваш Email*";
@@ -2748,15 +2849,18 @@ body {
   font-weight: normal;
   color: #444;
   font-family: 'Open Sans';
-  top: -64px;
-  left: 27px;
+  top: -36px;
+  left: -4px;
   opacity: 0.3;
 }
 .form-email__icon {
   position: absolute;
   fill-opacity: 0.2;
-  top: 34px;
-  right: 36px;
+  top: -41px;
+  right: 6px;
+}
+.form-email__field-hide + .form-email__label::before {
+  display: none;
 }
 @keyframes scale_text {
   to {
@@ -2766,7 +2870,7 @@ body {
 .form-extra {
   border: none;
   padding: 0;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 .form-extra__title {
   font-size: 17px;
@@ -2784,7 +2888,7 @@ body {
   content: "";
   display: block;
   position: absolute;
-  width: 198px;
+  width: 200px;
   height: 1px;
   background-color: #62d1bb;
   right: 0;
@@ -2799,4 +2903,39 @@ body {
   box-sizing: border-box;
   margin-left: 28px;
   padding: 17px 17px;
+  cursor: pointer;
+  color: #444;
+}
+.form-extra__field:hover {
+  border-color: #62d1ba;
+}
+.form-extra__field:focus {
+  border-color: #62d1ba;
+}
+.form-extra__field:focus + label::before {
+  animation-name: scale_text;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.form-extra__label {
+  font-size: 0;
+  position: relative;
+  cursor: pointer;
+}
+.form-extra__label::before {
+  content: "Опишите все ваши пожелания к заказу";
+  display: block;
+  width: 170px;
+  position: absolute;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: normal;
+  color: #444;
+  font-family: 'Open Sans';
+  top: -126px;
+  left: -247px;
+  opacity: 0.3;
+}
+.form-extra__field-hide + .form-extra__label::before {
+  display: none;
 }

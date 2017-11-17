@@ -6,7 +6,7 @@
 .form-extra {
 	border: none;
 	padding: 0;
-	margin-bottom: 10px;
+	margin-bottom: 12px;
 	&__title {
 		.font(17px;16px;bold;#63d1bb);
 		position: relative;
@@ -19,7 +19,7 @@
 		content: "";
 		display: block;
 		position: absolute;
-		width: 198px;
+		width: 200px;
 		height: 1px;
 		background-color: #62d1bb;
 		right: 0;
@@ -34,5 +34,36 @@
 		box-sizing: border-box;
 		margin-left: 28px;
 		padding: 17px 17px;
+		cursor: pointer;
+		color: #444;
+	}
+	&__field:hover {
+		border-color: #62d1ba;
+	}
+	&__field:focus {
+		border-color: #62d1ba;
+	}
+	&__field:focus + label::before {
+		animation-name: scale_text;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+	}
+	&__label {
+		font-size: 0;
+		position: relative;
+		cursor: pointer;
+	}
+	&__label::before {
+		content: "Опишите все ваши пожелания к заказу";
+		display: block;
+		width: 170px;
+		position: absolute;
+		.font(17px;18px;normal;#444);
+		top: -126px;
+		left: -247px;
+		opacity: 0.3;
+	}
+	&__field-hide + &__label::before {
+		display: none;
 	}
 }

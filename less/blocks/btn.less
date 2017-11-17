@@ -13,12 +13,14 @@
 		width: 100%;
 		margin-bottom: 35px;
 	}
+	&-form-submit:hover,
 	&-order:hover,
 	&-write-us:hover,
 	&-write-reviews:hover {
 		background-color: #444444;
 		color: rgb(255,255,255);
 	}
+	&-form-submit:active,
 	&-order:active,
 	&-write-us:active,
 	&-write-reviews:active {
@@ -182,6 +184,13 @@
 		left: calc((258px - (101px * 0.8)) / 2);
 		top: calc((149px - (77px * 0.8)) / 2);
 		opacity: 0.3;
+	}
+	&-form-submit {
+		outline: none;
+		background-color: transparent;
+		margin: 0 30px 10px;
+		padding: 14px 0px;
+		width: 260px;
 	}
 	@media @tablet_width {
 		&-breadcrumbs {
