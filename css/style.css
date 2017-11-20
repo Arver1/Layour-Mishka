@@ -1890,6 +1890,7 @@ body {
   .catalog-main {
     width: 768px;
     margin-top: -44px;
+    border-top: 1px solid #dfdfdf;
   }
   .catalog-main__title {
     border: none;
@@ -1918,6 +1919,7 @@ body {
   .catalog-main {
     width: 1150px;
     margin-top: 0px;
+    border: none;
   }
   .catalog-main__title {
     font-size: 53px;
@@ -2407,6 +2409,46 @@ body {
   color: #444;
   font-family: 'Open Sans';
 }
+@media (min-width: 768px) {
+  .form-main {
+    margin-top: -44px;
+    width: 768px;
+    border-top: 1px solid #dfdfdf;
+  }
+}
+.form-main__title {
+  border-top: none;
+  font-size: 43px;
+  line-height: 50px;
+  font-weight: bold;
+  color: #000;
+  font-family: 'Open Sans';
+  padding: 48px 0 94px;
+  position: relative;
+  margin-bottom: 60px;
+}
+.form-main__title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 24px;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  background: url('../../img/bg-zigzag-fill.svg') no-repeat;
+  background-size: auto 24px;
+}
+.form-main__description {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: normal;
+  color: #444;
+  font-family: 'Open Sans';
+  margin: 0 50px 70px;
+}
+.form-main__form {
+  width: 768px;
+}
 .form-type {
   border: none;
   padding: 0;
@@ -2472,6 +2514,17 @@ body {
 .form-type__field:checked + .form-type__label::before {
   box-shadow: inset 0 0 0 10px #fff,
 		inset 0 0 0 18px #62d1ba;
+}
+@media (min-width: 768px) {
+  .form-type {
+    width: 100%;
+  }
+  .form-type__legend {
+    width: 200px;
+  }
+  .form-type__label {
+    width: 334px;
+  }
 }
 .form-color {
   border: none;
