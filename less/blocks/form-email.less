@@ -29,11 +29,12 @@
 	&__field {
 		.inline_block();
 		width: 260px;
+		box-sizing: border-box;
+		padding: 0 40px 19px 0;
 		margin: 0 29px;
 		border: none;
 		border-bottom: 2px solid #000;
 		outline: none;
-		padding-bottom: 19px;
 		cursor: pointer;
 		color: #444;
 	}
@@ -84,5 +85,40 @@
 	}
 	&__field-hide + &__label::before {
 		display: none;
+	}
+	@media @tablet_width {
+		background-color: #f1f1f1;
+		margin: 0 0 49px;
+		&__wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 50px 36px;
+		}
+		&__title {
+			flex-basis: 168px;
+			padding: 6px 0;
+			margin: 0;
+		}
+		&__title::before {
+			display: none;
+		}
+		&__field {
+			background-color: #f1f1f1;
+			flex-basis: 500px;
+			margin: 0;
+			padding-right: 55px;
+		}
+		&__label::before {
+			.font(19px;18px;normal;#444);
+			width: 200px;
+			left: 153px;
+		}
+		&__icon {
+			top: -41px;
+			right: -356px;
+		}
+		&__field:focus + label::before {
+			transform-origin: 20% 80%;
+		}
 	}
 }

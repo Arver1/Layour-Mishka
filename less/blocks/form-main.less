@@ -29,6 +29,7 @@
 	}
 	@media @tablet_width {
 		margin-top: -44px;
+		margin-bottom: 32px;
 		width: 768px;
 		border-top: 1px solid #dfdfdf;
 	}
@@ -52,9 +53,21 @@
 	}
 	&__description {
 		.font(17px;30px;normal;#444);
-		margin: 0 50px 70px;
+		margin: 0 50px 57px;
 	}
 	&__form {
 		width: 768px;
+	}
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 50px;
+	}
+	&__notice {
+		flex-basis: 314px;
+		.font(17px;30px;normal;#444);
+		margin-left: auto;
+		text-align: right;
+		padding: 9px 0 0 20px;
 	}
 }

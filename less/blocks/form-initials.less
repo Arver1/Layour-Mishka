@@ -11,6 +11,10 @@
 		display: flex;
 		flex-wrap: wrap;
 	}
+	&__wrapper-field {
+		display: flex;
+		flex-wrap: wrap;
+	}
 	&__title {
 		.font(17px;16px;bold;#63d1bb);
 		position: relative;
@@ -99,5 +103,60 @@
 	}
 	&__field-hide + &__label::before {
 		display: none;
+	}
+	@media @tablet_width {
+		margin: 0; 
+		&__wrapper {
+			margin: 0 50px 25px;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		&__title {
+			flex-basis: 168px;
+			margin: 0;
+			padding: 18px 0;
+		}
+		&__wrapper-field {
+			flex-basis: 500px;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		&__title::before {
+			display: none;
+		}
+		&__label {
+			.font(19px);
+		}
+		&__label::before {
+			.font(19px;18px;normal;#444);
+		}
+		&__label {
+			flex-basis: 124px;
+			padding: 13px 0;
+			margin: 0;
+		}
+		&__label-name {
+			flex-basis: 72px;
+		}
+		&__label::before {
+			.font(19px;18px;normal;#444);
+			top: 16px;
+			left: 142px;
+			width: 375px;
+		}
+		&__label-name::before {
+			left: 89px;
+		}
+		&__field {
+			flex-basis: 375px;
+			box-sizing: border-box;
+			flex-grow: 1;
+			margin: 0;
+			margin: 13px 0 23px;
+			padding-left: 20px;
+		}
+		&__field:focus + label::before {
+			transform-origin: 20% 20%;
+		}
 	}
 }

@@ -66,4 +66,30 @@
 	&__field-hide + &__label::before {
 		display: none;
 	}
+	@media @tablet_width {
+		margin: 0 0 17px;
+		&__wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 50px 36px;
+		}
+		&__title {
+			flex-basis: 168px;
+			padding: 17px 0;
+			margin: 0;
+		}
+		&__title::before {
+			display: none;
+		}
+		&__field {
+			flex-basis: 500px;
+			margin: 0;
+		}
+		&__label::before {
+			.font(19px;18px;normal;#444);
+			top: 15px;
+			left: -484px;
+			width: 500px;
+		}
+	}
 }
