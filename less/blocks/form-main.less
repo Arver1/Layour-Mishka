@@ -32,42 +32,62 @@
 		margin-bottom: 32px;
 		width: 768px;
 		border-top: 1px solid #dfdfdf;
+		&__title {
+			border-top: none;
+			.font(43px;50px);
+			padding: 48px 0 94px;
+			position: relative;
+			margin-bottom: 60px;
+		}
+		&__title::after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 24px;
+			position: absolute;
+			bottom: 0px;
+			left: 0;
+			background: url('../../img/bg-zigzag-fill.svg') no-repeat;
+			background-size: auto 24px;
+		}
+		&__description {
+			.font(17px;30px;normal;#444);
+			margin: 0 50px 57px;
+		}
+		&__form {
+			width: 768px;
+		}
+		&__wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 50px;
+		}
+		&__notice {
+			flex-basis: 314px;
+			.font(17px;30px;normal;#444);
+			margin-left: auto;
+			text-align: right;
+			padding: 9px 0 0 20px;
+		}
 	}
-	&__title {
-		border-top: none;
-		.font(43px;50px);
-		padding: 48px 0 94px;
-		position: relative;
-		margin-bottom: 60px;
-	}
-	&__title::after {
-		content: "";
-		display: block;
-		width: 100%;
-		height: 24px;
-		position: absolute;
-		bottom: 0px;
-		left: 0;
-		background: url('../../img/bg-zigzag-fill.svg') no-repeat;
-		background-size: auto 24px;
-	}
-	&__description {
-		.font(17px;30px;normal;#444);
-		margin: 0 50px 57px;
-	}
-	&__form {
-		width: 768px;
-	}
-	&__wrapper {
-		display: flex;
-		flex-wrap: wrap;
-		margin: 0 50px;
-	}
-	&__notice {
-		flex-basis: 314px;
-		.font(17px;30px;normal;#444);
-		margin-left: auto;
-		text-align: right;
-		padding: 9px 0 0 20px;
+	@media @desktop_width {
+		width: 1150px;
+		margin-top: 0px;
+		&__title {
+			.font(53px;57px);
+			padding: 40px 0 120px;
+			margin-bottom: 103px;
+		}
+		&__title::after {
+			background-size: auto 34px;
+			height: 34px;
+		}
+		&__description {
+			width: 700px;
+			margin: 0 auto 58px;
+		}
+		&__form {
+			width: 1150px;
+		}
 	}
 }

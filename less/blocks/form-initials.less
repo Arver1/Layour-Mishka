@@ -141,12 +141,15 @@
 		&__label::before {
 			.font(19px;18px;normal;#444);
 			top: 16px;
-			left: 142px;
-			width: 375px;
+			//left: 142px;
+			right: -220px;
+			width: 200px;
+			//width: 375px;
 		}
+		/*
 		&__label-name::before {
 			left: 89px;
-		}
+		}*/
 		&__field {
 			flex-basis: 375px;
 			box-sizing: border-box;
@@ -157,6 +160,25 @@
 		}
 		&__field:focus + label::before {
 			transform-origin: 20% 20%;
+		}
+	}
+	@media @desktop_width {
+		&__title {
+			flex-basis: 166px;
+			text-align: center;
+			margin-right: 11px;
+		}
+		&__wrapper-field {
+			flex-basis: 698px;
+			margin-right: auto;
+			flex-wrap: wrap;
+		}
+		&__label {
+			max-width: 175px;
+			padding-right: 26px;
+		}
+		&__field {
+			min-width: calc(698px - 175px);
 		}
 	}
 }
